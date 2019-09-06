@@ -5,19 +5,7 @@ let mongoose = require("mongoose");
 let jwtutil = require("../util/jwt");
 let dateformat = require("../util/util");
 let dbmodel = require("../util/dbmodel");
-// 新闻骨架
-// let newsSchema = mongoose.Schema({
-//     nid:String,
-//     nname:String,
-//     ncontent:String,
-//     npubdate:String,
-//     nhits:Number,
-//     ntype:String,
-//     wid:String
-// });
-//
-// // 新闻模型
-// let newsmodel = new mongoose.model("news",newsSchema,"news");
+
 router.all('*', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "x-requested-with,content-type,token,Authorization");
@@ -203,10 +191,7 @@ router.get("/singlenews",function (req,res) {
             res.send({status:"获得新闻详情",news:data});}
         }
     });
-    // if(hitflag == true){}
-    //     dbmodel.newsmodel.find({}).exec(function (err,data) {
-    //
-    // });
+    
 
 });
 

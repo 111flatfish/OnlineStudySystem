@@ -53,10 +53,8 @@
       <change afterPath="$PROJECT_DIR$/../node.js/Demo/路由.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../vue项目/translateApp/translate/src/components/TranslateFrom.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../vue项目/translateApp/translate/src/components/TranslateTo.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../算法设计/冒泡排序.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/服务器/node.js/express/appServer/routes/news.js" beforeDir="false" afterPath="$PROJECT_DIR$/服务器/node.js/express/appServer/routes/news.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -74,6 +72,21 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="513">
               <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/routes/news.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="906">
+              <caret line="193" column="4" selection-start-line="193" selection-start-column="4" selection-end-line="193" selection-end-column="4" />
+              <folding>
+                <element signature="e#1015#2554#0" />
+                <element signature="e#2607#3466#0" />
+                <element signature="e#3519#4144#0" />
+                <element signature="e#4200#4623#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -99,11 +112,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="54">
-              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+              <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -122,15 +135,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="54">
               <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/components/news/newslist.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -232,7 +236,6 @@
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/App.vue" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/components/news/indexnews.vue" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/components/index.vue" />
-        <option value="$PROJECT_DIR$/服务器/node.js/express/appServer/routes/news.js" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/components/news/newslist.vue" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/main.js" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/components/usersenter/newsmanage/addnews.vue" />
@@ -240,6 +243,7 @@
         <option value="$PROJECT_DIR$/log.txt" />
         <option value="$PROJECT_DIR$/dir/test" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/服务器/node.js/express/appServer/routes/news.js" />
       </list>
     </option>
   </component>
@@ -496,12 +500,12 @@
       <workItem from="1567172418101" duration="7068000" />
       <workItem from="1567248702976" duration="6198000" />
       <workItem from="1567316324144" duration="5886000" />
-      <workItem from="1567780716220" duration="1095000" />
+      <workItem from="1567780716220" duration="1470000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197404000" />
+    <option name="totallyTimeSpent" value="197779000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1868" height="1096" extended-state="6" />
@@ -760,19 +764,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/routes/news.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1998">
-          <caret line="185" column="36" selection-start-line="185" selection-start-column="36" selection-end-line="185" selection-end-column="36" />
-          <folding>
-            <element signature="e#1015#2554#0" />
-            <element signature="e#2607#3466#0" />
-            <element signature="e#3519#4144#0" />
-            <element signature="e#4200#4623#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/components/usersenter/worker.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="945">
@@ -863,7 +854,20 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/routes/news.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="906">
+          <caret line="193" column="4" selection-start-line="193" selection-start-column="4" selection-end-line="193" selection-end-column="4" />
+          <folding>
+            <element signature="e#1015#2554#0" />
+            <element signature="e#2607#3466#0" />
+            <element signature="e#3519#4144#0" />
+            <element signature="e#4200#4623#0" />
+          </folding>
         </state>
       </provider>
     </entry>
