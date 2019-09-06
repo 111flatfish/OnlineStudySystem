@@ -54,7 +54,7 @@
       <change afterPath="$PROJECT_DIR$/../vue项目/translateApp/translate/src/components/TranslateFrom.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../vue项目/translateApp/translate/src/components/TranslateTo.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../算法设计/冒泡排序.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/服务器/node.js/express/appServer/routes/news.js" beforeDir="false" afterPath="$PROJECT_DIR$/服务器/node.js/express/appServer/routes/news.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -76,17 +76,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/routes/news.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="906">
-              <caret line="193" column="4" selection-start-line="193" selection-start-column="4" selection-end-line="193" selection-end-column="4" />
-              <folding>
-                <element signature="e#1015#2554#0" />
-                <element signature="e#2607#3466#0" />
-                <element signature="e#3519#4144#0" />
-                <element signature="e#4200#4623#0" />
-              </folding>
+            <state relative-caret-position="366">
+              <caret line="188" column="19" lean-forward="true" selection-start-line="188" selection-start-column="19" selection-end-line="188" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/components/usersenter/newsmanage/coursemanage/addcourse.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1026">
+              <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -135,18 +138,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="54">
               <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/components/news/indexnews.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#li#1;n#ul#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -244,6 +235,7 @@
         <option value="$PROJECT_DIR$/dir/test" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/服务器/node.js/express/appServer/routes/news.js" />
+        <option value="$PROJECT_DIR$/前端/onlinestudy/src/components/usersenter/newsmanage/coursemanage/addcourse.vue" />
       </list>
     </option>
   </component>
@@ -320,6 +312,15 @@
               <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
+              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
+              <item name="前端" type="462c0819:PsiDirectoryNode" />
+              <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
@@ -443,16 +444,16 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\Desktop\在线学习系统\服务器\node.js\express\appServer\public\images" />
-      <recent name="C:\Users\Administrator\Desktop\在线学习系统\前端\onlinestudy\public\css" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\在线学习系统\前端\onlinestudy\src\components\usersenter\newsmanage\coursemanage" />
       <recent name="C:\Users\Administrator\Desktop\在线学习系统\前端\onlinestudy\src\components\usersenter\newsmanage" />
       <recent name="C:\Users\Administrator\Desktop\在线学习系统\前端\onlinestudy\src\components\news" />
       <recent name="C:\Users\Administrator\Desktop\在线学习系统\服务器\node.js\express\appServer\routes" />
       <recent name="C:\Users\Administrator\Desktop\在线学习系统\前端\onlinestudy\src\assets" />
-      <recent name="C:\Users\Administrator\Desktop\在线学习系统\前端\onlinestudy\src\components\usersenter" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\在线学习系统\服务器\node.js\express\appServer\public\images" />
+      <recent name="C:\Users\Administrator\Desktop\在线学习系统\前端\onlinestudy\public\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -505,7 +506,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197779000" />
+    <option name="totallyTimeSpent" value="198520000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1868" height="1096" extended-state="6" />
@@ -534,9 +535,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/headimage/2019732227-flash4745.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/前端/onlinestudy/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -860,14 +858,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/routes/news.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="906">
-          <caret line="193" column="4" selection-start-line="193" selection-start-column="4" selection-end-line="193" selection-end-column="4" />
-          <folding>
-            <element signature="e#1015#2554#0" />
-            <element signature="e#2607#3466#0" />
-            <element signature="e#3519#4144#0" />
-            <element signature="e#4200#4623#0" />
-          </folding>
+        <state relative-caret-position="366">
+          <caret line="188" column="19" lean-forward="true" selection-start-line="188" selection-start-column="19" selection-end-line="188" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/components/usersenter/newsmanage/coursemanage/addcourse.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
         </state>
       </provider>
     </entry>
