@@ -1,0 +1,22 @@
+{
+  "name": "appserver",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.7.0",
+    "koa2-cors": "^2.0.6",
+    "mongodb": "*",
+    "mongoose": "^5.6.7",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.2"
+  }
+}
