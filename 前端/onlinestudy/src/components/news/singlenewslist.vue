@@ -4,7 +4,8 @@
     <article>
         标题：{{news.nname}}<br>
       <hr>
-        内容：{{news.ncontent}}
+        内容：
+        <div name="" id="text1" style="width: 100%;height:auto"></div>
     </article>
   </div>
 </template>
@@ -36,9 +37,14 @@ export default {
       axios.get("http://127.0.0.1/news/singlenews?id="+this.id+"&hitflag="+hitflag).then(data=>{
           // window.console.log(data.data.news[0]);
           this.news = data.data.news[0];
+          let otea = document.getElementById("text1");
+          window.console.log(this.news.ncontent);
+          otea.innerHTML = this.news.ncontent;
       });
+  },
+    mounted() {
 
-  }
+    }
 }
 </script>
 

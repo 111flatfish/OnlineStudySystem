@@ -8,9 +8,11 @@
         <label>分类：</label>
         <input type="text" name="type" class="form-control" placeholder="前端" v-model="formdata.type">
         <label>内容：</label>
-        <input type="text" name="content" class="form-control" placeholder="键入内容" v-model="formdata.content">
+        <!--<input type="text" name="content" class="form-control" placeholder="键入内容" v-model="formdata.content">-->
+        <Editor :catch-data="catchData"></Editor>
         <input type="button" value="上传" @click="upload" class="btn btn-primary">
       </form>
+      <div>{{formdata.content}}</div>
       <!--<div id="contentedit">-->
         <!--<div id="control">-->
           <!--<ul>-->
@@ -27,7 +29,6 @@
         <!--<div id="edit" contenteditable="true">-->
         <!--</div>-->
       <!--</div>-->
-      <Editor></Editor>
     </div>
   </div>
 </template>
@@ -52,7 +53,10 @@ export default {
           axios.post("http://127.0.0.1:80/news/addnews",this.formdata).then(data=>{
               window.console.log(data.data);
           })
-      }
+      },
+    catchData(value){
+        this.formdata.content = value;
+    }
 },
   created() {
 

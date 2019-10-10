@@ -3,5 +3,13 @@ function format(date) {
     +date.getHours().toString()+":"+date.getMinutes().toString()+":"+date.getSeconds().toString();
     // return date.getTime();
 }
-
-module.exports = format;
+const imgFormat = {
+    "image/jpeg":".jpg",
+    "image/png":".png",
+    "image/tiff":".tif",
+    "image/gif":".gif",
+}
+module.exports = {
+    format,
+    imgFormat
+};

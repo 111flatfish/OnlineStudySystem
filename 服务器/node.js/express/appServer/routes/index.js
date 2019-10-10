@@ -86,7 +86,7 @@ router.all('*', function(req, res, next) {
   res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
   // res.header("X-Powered-By", ' 3.2.1')
   // res.header("Content-Type", "text/html;charset=utf-8");
-  next();
+    next();
 });
 /* 获取用户中心信息 */
 router.get('/user.html', function(req, res) {
@@ -101,7 +101,7 @@ router.get('/user.html', function(req, res) {
         let result = jwt.verifyToken();
         if(result == "err"){
             // console.log("出错");
-            res.send({status:"expire",});
+            res.send({status:"expire"});
         }else {
             switch (type) {
                 case "1":
@@ -360,7 +360,7 @@ router.post("/login.html",function (req,res) {
                       let token = jwt.generateToken();
                       res.send({status:"职员",meg:"登录成功",token:token,hit:data[0].wid});
                   }else {
-                      res.send({status:"职员",meg:"账号或密码错误"});w
+                      res.send({status:"职员",meg:"账号或密码错误"});
                   }
 
               }else{
