@@ -9,10 +9,7 @@
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-// import Register from "./components/register/userRegister"
-// import Index from "./components/index"
-// import Login from "./components/login"
+
 
 import axios from "axios"
 
@@ -78,5 +75,6 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0px;
 }
 </style>

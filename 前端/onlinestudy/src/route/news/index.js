@@ -1,4 +1,4 @@
 export default {
-    path:"/news",
-    component:()=>import("../../view/index")
+    path:"/newslist",
+    component:()=>import("../../view/news/index.vue")
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="login">
     <form action="" method="post">
-      会员：<input type="radio" name="logintype" value="会员" v-model="formdata.logintype">
+      会员：<input type="radio" name="logintype" value="会员"  v-model="formdata.logintype">
       职员：<input type="radio" name="logintype" value="职员" v-model="formdata.logintype">
       系统管理员：<input type="radio" name="logintype" value="系统管理员" v-model="formdata.logintype">
       <br>
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-  import axios from "../util/axios-auth"
+  import axios from "../../util/axios-auth"
   import Qs from "qs"
 export default {
   name: 'Login',

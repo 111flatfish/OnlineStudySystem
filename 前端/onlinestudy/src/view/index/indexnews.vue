@@ -51,6 +51,7 @@ export default {
 <style scoped>
 li{
   list-style: none;
+
 }
 #newsnav{
   height: 50px;
@@ -84,6 +85,7 @@ li{
   border-bottom: 1px dashed #ccc;
   cursor: pointer;
   position: relative;
+  overflow: hidden;
 }
 #list li:hover{
   opacity: 0.7;

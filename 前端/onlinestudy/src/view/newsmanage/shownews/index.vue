@@ -2,10 +2,7 @@
   <div class="container">
     <hr>
     <h1 class="page-header">新闻:</h1>
-    <button class="btn btn-primary" @click="showadd" style="margin-bottom: 20px">添加新闻</button>
-    <button class="btn btn-primary" @click="shownew" style="margin-bottom: 20px">新闻列表</button>
-    <button @click="reflush" class="btn btn-primary" style="margin-left: 20px;margin-bottom: 20px">刷新</button>
-    <div class="shownews" v-if="actionshow">
+    <div class="shownews">
       <table class="table table-bordered">
         <tr>
           <th>标题</th>
@@ -34,28 +31,16 @@
             </ul>
         </div>
     </div>
-    <div class="addnews" v-if="actionadd">
-        <addnew></addnew>
-    </div>
-    <div class="changenews" v-if="actionchange">
-        <changenew></changenew>
-    </div>
-
   </div>
 </template>
 
 
 <script>
-  import Addnew from "./addnews"
-  import Changenew from "./changenews"
   import axios from "../../../util/axios-auth"
 export default {
   name: 'news',
   data(){
       return {
-        actionshow:true,
-        actionadd:false,
-        actionchange:false,
         news:[],
         pagelist:[],
           pagelist2:[1,2,3,4],
@@ -63,35 +48,20 @@ export default {
       }
   },
   methods:{
-    showadd(){
-        this.actionshow = false;
-        this.actionchange = false;
-        this.actionadd = true;
-    },
-    shownew(){
-      axios.get("http://127.0.0.1:80/news/shownews").then(data=>{
-            this.news = data.data.news;
-      })
-      this.actionchange = false;
-      this.actionadd = false;
-      this.actionshow = true;
-    },
+
+
     changebtn(data){
         window.console.log(data.nname);
         this.$store.commit("setuserdata",data);
-        this.actionchange = true;
-        this.actionadd = false;
-        this.actionshow = false;
+        this.$router.push("/usercenter/newsmanage/changenews");
     },
     deletebtn(data){
         // window.console.log(data.nid);
         axios.get("http://127.0.0.1:80/news/deletenews?nid="+data.nid).then(data=>{
             window.console.log(data);
-            this.$router.go(0);
+            window.alert("删除成功");
+            this.$router.push("/usercenter/newsmanage/shownews");
         });
-    },
-    reflush(){
-        this.$router.go(0);
     },
       page(ev){
         // window.console.log(ev.target.innerText);
@@ -115,11 +85,6 @@ export default {
         this.news = data.data.news;
         window.console.log(this.news);
     })
-  },
-
-  components:{
-    addnew:Addnew,
-    changenew:Changenew
   }
 }
 </script>
@@ -142,7 +107,6 @@ ul{
 ul li{
     width: 30px;
     margin-left: 20px;
-    background-color: #00B7FF;
     border: 2px solid green;
     float: left;
     cursor: pointer;

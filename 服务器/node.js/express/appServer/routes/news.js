@@ -40,6 +40,10 @@ router.post('/addnews', function(req, res) {
     let date = new Date();
     let time = formatutil.format(date);
     // console.log(time);
+    if(result == "err"){
+        // console.log("出错");
+        res.send({status:"expire"});
+    }else {
         dbmodel.userconfigmodel.find({}).exec(function (err,data) {
             if(err){
                 console.log("数据库出错");
@@ -73,8 +77,8 @@ router.post('/addnews', function(req, res) {
 
             }
         });
+    }
         res.send({status:"添加新闻"});
-
 });
 
 //查找新闻
@@ -116,42 +120,57 @@ router.post("/modify",function (req,res) {
     let nname = req.body.nname;
     let ntype = req.body.ntype;
     let ncontent =req.body.ncontent;
-
-    dbmodel.newsmodel.find({nid:nid}).exec(function (err,data) {
-        if(err){
-            console.log("数据库出错");
-        }else if(data.length > 0){
-            data[0].nname = nname;
-            data[0].ntype = ntype;
-            data[0].ncontent = ncontent;
-            data[0].save(function (err) {
-                if(err){
-                    console.log("修改失败");
-                }else{
-                    res.send({status:"修改成功"});
-                }
-            });
-        }
-    });
+    let token = req.headers.token;
+    let jwt = new jwtutil(token);
+    let result = jwt.verifyToken();         //workerid
+    if(result == "err"){
+        // console.log("出错");
+        res.send({status:"expire"});
+    }else {
+        dbmodel.newsmodel.find({nid: nid}).exec(function (err, data) {
+            if (err) {
+                console.log("数据库出错");
+            } else if (data.length > 0) {
+                data[0].nname = nname;
+                data[0].ntype = ntype;
+                data[0].ncontent = ncontent;
+                data[0].save(function (err) {
+                    if (err) {
+                        console.log("修改失败");
+                    } else {
+                        res.send({status: "修改成功"});
+                    }
+                });
+            }
+        });
+    }
 });
 
 // 删除新闻
 router.get("/deletenews",function (req,res) {
     let nid = req.query.nid;
     // console.log(nid);
-    dbmodel.newsmodel.find({nid:nid}).exec(function (err,data) {
-        if(err){
-            console.log("数据库出差错");
-        }else {
-            data[0].remove(function (err) {
-                if(err){
-                    console.log("删除出错");
-                }else {
-                    res.send({status:"删除成功！"});
-                }
-            })
-        }
-    });
+    let token = req.headers.token;
+    let jwt = new jwtutil(token);
+    let result = jwt.verifyToken();         //workerid
+    if(result == "err"){
+        // console.log("出错");
+        res.send({status:"expire"});
+    }else {
+        dbmodel.newsmodel.find({nid: nid}).exec(function (err, data) {
+            if (err) {
+                console.log("数据库出差错");
+            } else {
+                data[0].remove(function (err) {
+                    if (err) {
+                        console.log("删除出错");
+                    } else {
+                        res.send({status: "删除成功！"});
+                    }
+                })
+            }
+        });
+    }
 });
 
 // 首页新闻+新闻页
@@ -206,6 +225,7 @@ router.get("/singlenews",function (req,res) {
     });
 });
 
+// 上传图片
 router.post("/loadimg",function (req,res) {
     let form = new formidable.IncomingForm({
         uploadDir : "./public/newsimage",

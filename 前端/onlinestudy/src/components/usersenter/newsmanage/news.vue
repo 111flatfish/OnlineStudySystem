@@ -53,7 +53,7 @@
 <script>
   import axios  from "../../../util/axios-auth"
   import jquery from "jquery/dist/jquery"
-  import Shownew from "./../newsmanage/shownews"
+  import Shownew from "../../../view/newsmanage/shownews/index"
 
 
   export default {

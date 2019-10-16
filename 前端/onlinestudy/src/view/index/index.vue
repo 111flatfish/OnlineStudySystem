@@ -8,7 +8,7 @@
         <router-link to="/course"><button class="btn btn-primary" @click="news">课程</button ></router-link>
         <button class="btn btn-primary" @click="usercenter">个人中心</button>
         <router-link to="/login" ><button class="btn btn-primary">登录</button></router-link>
-        <router-link to="/register" ><button class="btn btn-primary">注册</button></router-link>
+        <router-link to="/register/userregister" ><button class="btn btn-primary">注册</button></router-link>
       </div>
       <button @click="add" class="btn btn-primary">增加缓存</button>
       <button v-on:click="clearbuffer"  class="btn btn-primary">清除缓存</button>
@@ -26,7 +26,7 @@
 
 
 <script>
-  import News from "../components/news/indexnews"
+  import News from "./indexnews"
 export default {
   name: 'Index',
   data(){
@@ -38,19 +38,7 @@ export default {
     news(){
     },
     usercenter(){
-        this.status = window.localStorage.getItem("usertype");
-        switch (this.status) {
-          case "会员":
-            this.$router.push({path:"/user"});
-            break;
-          case "职员":
-            this.$router.push({path:"/worker"});
-            break;
-          case "系统管理员":
-            this.$router.push({path:"/admin"});
-            break;
-
-        }
+        this.$router.push("/usercenter/userInfo");
     },
 
     clearbuffer(){

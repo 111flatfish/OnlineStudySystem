@@ -1,4 +1,4 @@
 export default {
     path:"/login",
-    component:()=>import("../../view/login.vue")
+    component:()=>import("../../view/login/index.vue")
 }

@@ -1,4 +1,4 @@
 export default {
     path:"/exam",
-    component:()=>import("../../view/index")
+    component:()=>import("../../view/exam")
 }

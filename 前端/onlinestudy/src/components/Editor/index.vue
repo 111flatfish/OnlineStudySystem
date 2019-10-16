@@ -2,34 +2,33 @@
     <div class="Editor">
         <div ref="editor" style="text-align:left"></div>
         <button v-on:click="getContent">查看内容</button>
-
     </div>
 </template>
 
 <script>
     import E from 'wangeditor';
-    import jquery from "jquery/dist/jquery"
     // import axios from "../../../util/axios-auth"
     export default {
       name: 'editor',
       data () {
         return {
-          editorContent: ''
+          editorContent: "",
+            txtcontent:""
         }
       },
-        props:["catchData"],
+        props:["catchData","content"],
       methods: {
         getContent: function () {
             // axios.post("/addnews",function (err,data) {
             //     console.log();
             // });
             window.console.log(this.editorContent);
-
-
         }
       },
       mounted() {
-        var editor = new E(this.$refs.editor)
+
+        var editor = new E(this.$refs.editor);
+        this.txtcontent = this.content;
         editor.customConfig.onchange = (html) => {
           this.editorContent = html
             this.catchData(html);
@@ -100,7 +99,7 @@
               }
           };
         editor.create();
-
+        editor.txt.html(this.txtcontent);
       }
     }
 </script>

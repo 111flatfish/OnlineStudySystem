@@ -9,7 +9,7 @@
         <input type="text" name="type" class="form-control" placeholder="前端" v-model="formdata.type">
         <label>内容：</label>
         <!--<input type="text" name="content" class="form-control" placeholder="键入内容" v-model="formdata.content">-->
-        <Editor :catch-data="catchData"></Editor>
+        <Editor :catch-data="catchData" v-bind:content="txtcontent"></Editor>
         <input type="button" value="上传" @click="upload" class="btn btn-primary">
       </form>
       <div>{{formdata.content}}</div>
@@ -36,7 +36,7 @@
 
 <script>
   import axios from "../../../util/axios-auth"
-  import editor from "./Editor"
+  import editor from "../../../components/Editor"
 export default {
   name: 'news',
   data(){
@@ -45,13 +45,16 @@ export default {
             title:"",
             type:"",
             content:""
-          }
+          },
+          txtcontent:""
       }
   },
   methods:{
       upload(){
           axios.post("http://127.0.0.1:80/news/addnews",this.formdata).then(data=>{
               window.console.log(data.data);
+              window.alert("添加成功")
+              this.$router.push("/usercenter/newsmanage/shownews")
           })
       },
     catchData(value){

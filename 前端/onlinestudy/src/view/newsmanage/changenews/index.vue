@@ -8,7 +8,8 @@
         <label>分类：</label>
         <input type="text" name="type" class="form-control" placeholder="网络" v-model="newsdata.ntype">
         <label>内容：</label>
-        <input type="text" name="content" class="form-control" placeholder="键入内容" v-model="newsdata.ncontent">
+        <!--<input type="text" name="content" class="form-control" placeholder="键入内容" v-model="newsdata.ncontent">-->
+        <Editor :catch-data="catchData" v-bind:content="newsdata.ncontent"></Editor>
         <input type="hidden" v-model="newsdata.nid" name="id">
         <input type="button"  @click="modifiy_save" value="修改新闻" class="form-control btn btn-primary">
       </form>
@@ -19,7 +20,8 @@
 
 
 <script>
-  import axios from "../../../util/axios-auth"
+  import axios from "../../../util/axios-auth";
+  import Editor from "../../../components/Editor"
 export default {
   name: 'news',
   data(){
@@ -35,15 +37,19 @@ export default {
         axios.post("http://127.0.0.1:80/news/modify",this.newsdata).then(data=>{
             if(data.data.status == "修改成功"){
                 window.console.log("修改成功");
-                window.alert("修改成功")
-                // this.$router.go(0);
+                window.alert("修改成功");
+                this.$store.commit("setuserdata",{});
+                this.$router.push("/usercenter/newsmanage/shownews");
             }
 
         });
+    },
+    catchData(value){
+      this.newsdata.ncontent = value;
     }
 },
-  created() {
-
+  components:{
+    Editor
   }
 }
 </script>

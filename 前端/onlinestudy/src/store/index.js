@@ -6,11 +6,11 @@ const store = new Vuex.Store({
     state:{
         newsdata:{
             nid:"",
-            nname:"aa",
-            ntype:"bb",
-            ncontent:"cc"
+            nname:"",
+            ntype:"",
+            ncontent:""
         },
-        flag:true
+        loginflag:false
     },
     getters:{
         getnewsdata:function (state) {
@@ -20,10 +20,10 @@ const store = new Vuex.Store({
     ,
     mutations:{
         setuserdata(state,data){
-            state.newsdata.nid = data.nid;
-            state.newsdata.nname = data.nname;
-            state.newsdata.ntype = data.ntype;
-            state.newsdata.ncontent = data.ncontent;
+            state.newsdata.nid = data.nid?data.nid:"";
+            state.newsdata.nname = data.nname?data.nname:"";
+            state.newsdata.ntype = data.ntype?data.ntype:"";
+            state.newsdata.ncontent = data.ncontent?data.ncontent:"";
         },
         setflag(state){
             state.flag = false;

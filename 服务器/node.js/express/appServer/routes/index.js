@@ -86,7 +86,14 @@ router.all('*', function(req, res, next) {
   res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
   // res.header("X-Powered-By", ' 3.2.1')
   // res.header("Content-Type", "text/html;charset=utf-8");
-    next();
+    let token = req.headers.token;
+    let jwt = new jwtutil(token);
+    let result = jwt.verifyToken();         //workerid
+    if(result == "err"){
+        res.send({status:"expire"})
+    }else {
+        next();
+    }
 });
 /* 获取用户中心信息 */
 router.get('/user.html', function(req, res) {
@@ -162,8 +169,6 @@ router.post("/userregister.html",upload.single("uheadimage"),function (req,res) 
     let file = req.file || {};
     let uheadimage = file.filename || "";
 
-
-
   let model = new usermodel();
   dbmodel.userconfigmodel.find({}).exec(function (err,data) {
       if(err){
@@ -222,7 +227,6 @@ router.post("/workerregister.html",upload.single("wheadimage"),function (req,res
     let wemail = req.body.wemail;
     let file = req.file || {};
     let wheadimage = file.filename || "";
-
 
     let model = new workermodel();
 
