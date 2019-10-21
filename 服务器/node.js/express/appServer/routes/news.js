@@ -223,6 +223,9 @@ router.get("/singlenews",function (req,res) {
             res.send({status:"获得新闻详情",news:data});}
         }
     });
+
+
+
 });
 
 // 上传图片

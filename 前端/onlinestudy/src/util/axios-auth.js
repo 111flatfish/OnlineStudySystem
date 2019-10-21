@@ -20,15 +20,15 @@ axios.interceptors.response.use(function (response) {
 
     window.console.log( typeof response);
     if(response["data"].status == "expire"){
-        window.localStorage.setItem("token","");
         router.push({
             path:"/expire"
         });
+        window.localStorage.setItem("token","");
     }
     return response;
 },function (err) {
     if(err.response){
-        window.console.log("登录过期："+err.response);
+        window.console.log("请求失败："+err);
         // app.$router.replace({
         //     path:"/login"
         // })

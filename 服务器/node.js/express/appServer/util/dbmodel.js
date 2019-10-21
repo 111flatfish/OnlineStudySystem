@@ -39,7 +39,7 @@ let courseSchema = mongoose.Schema({
     cpubdate:String,
     csynopsis:String,
     cprice:Number,
-    ccontent:String,
+    ccontent:Object,
     chits:Number,
     cstudycount:Number,
     cchapters:Number,

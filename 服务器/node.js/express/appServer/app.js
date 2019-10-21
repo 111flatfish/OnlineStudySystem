@@ -7,6 +7,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 let infoRouter = require("./routes/infogetter");
 let newsRouter = require("./routes/news");
+let courseRouter = require("./routes/course");
 const JwtUtil = require("./util/jwt");
 // let headimageRouter = require("./headimage");
 var app = express();
@@ -103,6 +104,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/infogetter',infoRouter);
 app.use('/news',newsRouter);
+app.use("/course",courseRouter)
 // app.use("/headimage",headimageRouter);
 
 
@@ -121,6 +123,7 @@ app.use(function(err, req, res, next) {
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   // render the error page
+  console.log(err.message);
   res.status(err.status || 500);
   res.render('error');
 });

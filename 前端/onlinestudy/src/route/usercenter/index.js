@@ -40,6 +40,29 @@ export default {
             meta:{
                 requireAuth:true
             },
+            children: [
+                {
+                    path:"addcourse",
+                    component:()=>import("../../view/coursemanage/addcourse"),
+                    meta:{
+                        requireAuth:true
+                    },
+                },
+                {
+                    path:"changecourse",
+                    component:()=>import("../../view/coursemanage/changecourse"),
+                    meta:{
+                        requireAuth:true
+                    },
+                },
+                {
+                    path:"showcourse",
+                    component:()=>import("../../view/coursemanage/showcourse"),
+                    meta:{
+                        requireAuth:true
+                    },
+                },
+            ]
         },
         {
             path:"exammanage",

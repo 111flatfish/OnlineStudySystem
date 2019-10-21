@@ -1,8 +1,7 @@
 <template>
-  <div class="container">
-    <hr>
+  <div class="shownews">
     <h1 class="page-header">新闻:</h1>
-    <div class="shownews">
+    <div class="shownews_content">
       <table class="table table-bordered">
         <tr>
           <th>标题</th>

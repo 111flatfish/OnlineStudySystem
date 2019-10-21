@@ -1,6 +1,5 @@
 <template>
-  <div class="container">
-    <div class="changenew">
+    <div class="changenews">
       <h1 class="page-head">修改新闻：</h1>
       <form action="" method="post" class="form-group">
         <label>标题：</label>
@@ -13,9 +12,7 @@
         <input type="hidden" v-model="newsdata.nid" name="id">
         <input type="button"  @click="modifiy_save" value="修改新闻" class="form-control btn btn-primary">
       </form>
-
     </div>
-  </div>
 </template>
 
 
@@ -23,7 +20,7 @@
   import axios from "../../../util/axios-auth";
   import Editor from "../../../components/Editor"
 export default {
-  name: 'news',
+  name: 'changenews',
   data(){
       return {
         newsdata:this.$store.getters.getnewsdata,

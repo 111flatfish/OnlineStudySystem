@@ -11,7 +11,7 @@
       <h3>课程<span></span></h3>
       <ul>
         <router-link tag="li" to="/usercenter/mycourse">我的课程</router-link>
-        <router-link tag="li" to="/usercenter/coursemanage/showcourse">我的课程</router-link>
+        <router-link tag="li" to="/usercenter/coursemanage/showcourse">课程管理</router-link>
       </ul>
       <h3>新闻<span></span></h3>
       <ul>

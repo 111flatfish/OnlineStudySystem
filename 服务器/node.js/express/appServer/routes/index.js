@@ -86,14 +86,7 @@ router.all('*', function(req, res, next) {
   res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
   // res.header("X-Powered-By", ' 3.2.1')
   // res.header("Content-Type", "text/html;charset=utf-8");
-    let token = req.headers.token;
-    let jwt = new jwtutil(token);
-    let result = jwt.verifyToken();         //workerid
-    if(result == "err"){
-        res.send({status:"expire"})
-    }else {
-        next();
-    }
+    next();
 });
 /* 获取用户中心信息 */
 router.get('/user.html', function(req, res) {
@@ -330,9 +323,6 @@ router.post("/login.html",function (req,res) {
   let username = req.body.username;
   let password = req.body.password;
   let logintype = req.body.logintype;
-  console.log(username);
-  console.log(password);
-  console.log(logintype);
   switch (logintype) {
       case "会员":
           usermodel.find({"uname":username}).exec(function (err,data) {

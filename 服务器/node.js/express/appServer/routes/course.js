@@ -20,7 +20,7 @@ router.all('*', function(req, res, next) {
 /* GET users listing. */
 // 插入课程
 router.post('/addcourse', function(req, res) {
-    // console.log(req.body.title);
+
     let token = req.headers.token;
     // 前端获取的数据
     let title = req.body.title;
@@ -29,13 +29,15 @@ router.post('/addcourse', function(req, res) {
     let content = req.body.content;
     let type = req.body.type;
     let chapters = req.body.chapters;
+    // console.log(typeof content);
     // 职员信息
     let jwt = new jwtutil(token);
     let result = jwt.verifyToken();
     // console.log(result);
     let len ;
     let date = new Date();
-    let time = dateformat(date);
+
+    let time = dateformat.format(date);
     // 插入数据库
     dbmodel.userconfigmodel.find({}).exec(function (err,data) {
         if(err){
@@ -80,20 +82,20 @@ router.post('/addcourse', function(req, res) {
 });
 
 //查找新闻
-router.get("/shownews",function (req,res) {
+router.get("/showcourse",function (req,res) {
     let token = req.headers.token;
     let page = req.query.page;
     console.log(page);
     let jwt = new jwtutil(token);
     let result = jwt.verifyToken();         //workerid
     if(page == 0){
-        dbmodel.newsmodel.find({"wid":result}).exec(function (err,data) {
+        dbmodel.coursemodel.find({"wid":result}).exec(function (err,data) {
             if(err){
                 console.log(err);
             }else{
                 let totallen = data.length;     //总数
                 let pagenum = Math.max(totallen/10,(Math.floor(totallen/10+1)));      //页数
-                res.send({status:"查找新闻总数",num:pagenum});
+                res.send({status:"查找课程总数",num:pagenum});
             }
         });
     }else {
@@ -101,7 +103,7 @@ router.get("/shownews",function (req,res) {
             if(err){
                 console.log(err);
             }else{
-                res.send({status:`查找第${page}页新闻成功`,news:data});
+                res.send({status:`查找第${page}页课程成功`,news:data});
             }
         });
     }

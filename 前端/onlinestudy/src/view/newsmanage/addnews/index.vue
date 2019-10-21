@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="news">
     <div class="addnew">
       <h1 class="page-head">添加新闻：</h1>
       <form action="" method="post" class="form-group">
