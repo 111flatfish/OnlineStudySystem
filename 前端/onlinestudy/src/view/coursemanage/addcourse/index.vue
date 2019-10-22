@@ -104,7 +104,7 @@
                 axios.post("http://127.0.0.1:80/course/addcourse",this.formdata).then(data=>{
                     window.console.log(data.data);
                     window.alert("添加成功")
-                    // this.$router.push("/usercenter/newsmanage/shownews")
+                    this.$router.push("/usercenter/coursemanage/showcourse")
                 })
             },
             catchData(value){

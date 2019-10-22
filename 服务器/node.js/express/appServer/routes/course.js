@@ -81,7 +81,7 @@ router.post('/addcourse', function(req, res) {
     res.send({status:"添加课程"});
 });
 
-//查找新闻
+//查找课程
 router.get("/showcourse",function (req,res) {
     let token = req.headers.token;
     let page = req.query.page;
@@ -99,30 +99,35 @@ router.get("/showcourse",function (req,res) {
             }
         });
     }else {
-        dbmodel.newsmodel.find({"wid":result}).limit(10).skip((page-1)*10).exec(function (err,data) {
+        dbmodel.coursemodel.find({"wid":result}).limit(10).skip((page-1)*10).exec(function (err,data) {
             if(err){
                 console.log(err);
             }else{
-                res.send({status:`查找第${page}页课程成功`,news:data});
+                res.send({status:`查找第${page}页课程成功`,course:data});
             }
         });
     }
 });
 
-// 修改新闻
+// 修改课程
 router.post("/modify",function (req,res) {
-    let nid = req.body.nid;
-    let nname = req.body.nname;
-    let ntype = req.body.ntype;
-    let ncontent =req.body.ncontent;
-
-    dbmodel.newsmodel.find({nid:nid}).exec(function (err,data) {
+    let cid = req.body.cid;
+    let cname = req.body.cname;
+    let ctype = req.body.ctype;
+    let ccontent =req.body.ccontent;
+    let cprice = req.body.cprice;
+    let csynopsis = req.body.csynopsis;
+    let cchapter = ccontent.length;
+    dbmodel.coursemodel.find({cid:cid}).exec(function (err,data) {
         if(err){
             console.log("数据库出错");
         }else if(data.length > 0){
-            data[0].nname = nname;
-            data[0].ntype = ntype;
-            data[0].ncontent = ncontent;
+            data[0].cname = cname;
+            data[0].ctype = ctype;
+            data[0].ccontent = ccontent;
+            data[0].csynopsis = csynopsis;
+            data[0].cchapters = cchapter;
+            data[0].cprice = cprice;
             data[0].save(function (err) {
                 if(err){
                     console.log("修改失败");
@@ -203,7 +208,7 @@ router.get("/singlenews",function (req,res) {
             res.send({status:"获得新闻详情",news:data});}
         }
     });
-    
+
 
 });
 

@@ -4,9 +4,9 @@
     <div class="shownews_content">
       <table class="table table-bordered">
         <tr>
-          <th>标题</th>
+          <th colspan="2">标题</th>
           <th>类型</th>
-          <th>内容</th>
+          <th colspan="2">内容</th>
           <th>上传时间</th>
           <th>更新</th>
           <th>删除</th>
@@ -14,9 +14,9 @@
         </tr>
 
         <tr v-for="item in news" v-bind:key="item.nid">
-            <td>{{item.nname}}</td>
+            <td colspan="2">{{item.nname}}</td>
             <td>{{item.ntype}}</td>
-            <td>{{item.ncontent}}</td>
+            <td colspan="2">{{item.ncontent}}</td>
             <td>{{item.npubdate}}</td>
             <td><button @click="changebtn({nid:item.nid,nname:item.nname,ntype:item.ntype,ncontent:item.ncontent})">更新</button></td>
             <td><button @click="deletebtn({nid:item.nid})">删除</button></td>
@@ -109,6 +109,20 @@ ul li{
     border: 2px solid green;
     float: left;
     cursor: pointer;
+
+}
+table{
+    width: 100%;
+    table-layout: fixed;
+}
+table tr td{
+    /* for IE */
+    text-overflow: ellipsis;
+    /* for Firefox,mozilla */
+    -moz-text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: left
 
 }
 </style>

@@ -2,73 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8fc1402-be46-4b38-9e09-e3ca57837332" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../ES6/Promise/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/Symbol、genarator/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/Symbol、genarator/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/async、await/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/async、await/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/async、await/index2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/事件、css/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/事件、css/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/事件、css/事件参数.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/事件、css/事件属性.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/事件、css/阻止默认事件、事件传播.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/事件、css/鼠标拖拽.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/函数参数默认值、箭头函数、剩余参数/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/函数参数默认值、箭头函数、剩余参数/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/对象简介语法/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/对象简介语法/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/数组循环/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/数组循环/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/数组循环/数组新方法.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/模块化/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/模块化/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/模块化/modules/1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/模块化/modules/2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/模块化/modules/3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/模块化/modules/4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/类和继承/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/类和继承/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/解构赋值/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/解构赋值/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ES6/解构赋值/解构赋值.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../React/test/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../React/test/组件生命周期.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bootstrap/demo/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bootstrap/demo/栅格布局/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bootstrap/demo/栅格布局/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bootstrap/demo/栅格布局/排版.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node.js/Demo/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node.js/Demo/Exeption.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node.js/Demo/Register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node.js/Demo/helloworld.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node.js/Demo/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node.js/Demo/module function/otherfunc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node.js/Demo/node_module/fileOption.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node.js/Demo/node_module/router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node.js/Demo/node_module/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node.js/Demo/node_module/worker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node.js/Demo/函数.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node.js/Demo/加载模块.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node.js/Demo/路由.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../schoolManageSystem/schoolmanagesystem/vue.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vue项目/translateApp/translate/src/components/TranslateFrom.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vue项目/translateApp/translate/src/components/TranslateTo.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../算法设计/冒泡排序.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/前端/onlinestudy/src/components/Editor/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/前端/onlinestudy/src/components/Editor/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/前端/onlinestudy/src/components/usercenterNav/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/前端/onlinestudy/src/components/usercenterNav/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/前端/onlinestudy/src/route/usercenter/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/前端/onlinestudy/src/route/usercenter/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/前端/onlinestudy/src/util/axios-auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/前端/onlinestudy/src/util/axios-auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/前端/onlinestudy/src/view/newsmanage/addnews/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/前端/onlinestudy/src/view/newsmanage/addnews/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/前端/onlinestudy/src/view/newsmanage/changenews/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/前端/onlinestudy/src/view/newsmanage/changenews/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../schoolsystem/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/index/1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES6/Promise/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ES6/Promise/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES6/Symbol、genarator/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ES6/Symbol、genarator/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES6/async、await/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ES6/async、await/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES6/async、await/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ES6/async、await/index2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES6/事件、css/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ES6/事件、css/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES6/事件、css/事件参数.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ES6/事件、css/事件参数.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES6/事件、css/事件属性.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ES6/事件、css/事件属性.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES6/事件、css/阻止默认事件、事件传播.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ES6/事件、css/阻止默认事件、事件传播.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES6/事件、css/鼠标拖拽.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ES6/事件、css/鼠标拖拽.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES6/函数参数默认值、箭头函数、剩余参数/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ES6/函数参数默认值、箭头函数、剩余参数/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES6/对象简介语法/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ES6/对象简介语法/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES6/数组循环/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ES6/数组循环/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES6/数组循环/数组新方法.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ES6/数组循环/数组新方法.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES6/模块化/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ES6/模块化/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES6/模块化/modules/1.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ES6/模块化/modules/1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES6/模块化/modules/2.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ES6/模块化/modules/2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES6/模块化/modules/3.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ES6/模块化/modules/3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES6/模块化/modules/4.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ES6/模块化/modules/4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES6/类和继承/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ES6/类和继承/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES6/解构赋值/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ES6/解构赋值/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES6/解构赋值/解构赋值.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ES6/解构赋值/解构赋值.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../React/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React/test/组件生命周期.html" beforeDir="false" afterPath="$PROJECT_DIR$/../React/test/组件生命周期.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bootstrap/demo/栅格布局/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../bootstrap/demo/栅格布局/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bootstrap/demo/栅格布局/排版.html" beforeDir="false" afterPath="$PROJECT_DIR$/../bootstrap/demo/栅格布局/排版.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node.js/Demo/Exeption.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node.js/Demo/Exeption.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node.js/Demo/Register.html" beforeDir="false" afterPath="$PROJECT_DIR$/../node.js/Demo/Register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node.js/Demo/helloworld.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node.js/Demo/helloworld.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node.js/Demo/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../node.js/Demo/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node.js/Demo/module function/otherfunc.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node.js/Demo/module function/otherfunc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node.js/Demo/node_module/fileOption.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node.js/Demo/node_module/fileOption.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node.js/Demo/node_module/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node.js/Demo/node_module/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node.js/Demo/node_module/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node.js/Demo/node_module/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node.js/Demo/node_module/worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node.js/Demo/node_module/worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node.js/Demo/函数.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node.js/Demo/函数.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node.js/Demo/加载模块.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node.js/Demo/加载模块.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node.js/Demo/路由.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node.js/Demo/路由.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../schoolManageSystem/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../schoolManageSystem/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../schoolManageSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../schoolManageSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../schoolManageSystem/schoolmanagesystem/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../schoolManageSystem/schoolmanagesystem/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../schoolManageSystem/schoolmanagesystem/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../schoolManageSystem/schoolmanagesystem/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue项目/translateApp/translate/src/components/TranslateFrom.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue项目/translateApp/translate/src/components/TranslateFrom.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue项目/translateApp/translate/src/components/TranslateTo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue项目/translateApp/translate/src/components/TranslateTo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/前端/onlinestudy/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/前端/onlinestudy/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/前端/onlinestudy/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/前端/onlinestudy/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/addcourse/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/addcourse/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/changecourse/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/changecourse/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/showcourse/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/showcourse/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/前端/onlinestudy/src/view/newsmanage/shownews/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/前端/onlinestudy/src/view/newsmanage/shownews/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/服务器/node.js/express/appServer/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/服务器/node.js/express/appServer/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/前端/onlinestudy/src/view/usercenter/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/前端/onlinestudy/src/view/usercenter/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/服务器/node.js/express/appServer/routes/course.js" beforeDir="false" afterPath="$PROJECT_DIR$/服务器/node.js/express/appServer/routes/course.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/服务器/node.js/express/appServer/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/服务器/node.js/express/appServer/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/服务器/node.js/express/appServer/routes/news.js" beforeDir="false" afterPath="$PROJECT_DIR$/服务器/node.js/express/appServer/routes/news.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/服务器/node.js/express/appServer/util/dbmodel.js" beforeDir="false" afterPath="$PROJECT_DIR$/服务器/node.js/express/appServer/util/dbmodel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../算法设计/冒泡排序.html" beforeDir="false" afterPath="$PROJECT_DIR$/../算法设计/冒泡排序.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -82,101 +70,85 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/addcourse/index.vue">
+        <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/routes/users.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/routes/message.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1399">
-              <caret line="146" column="50" lean-forward="true" selection-start-line="146" selection-start-column="50" selection-end-line="146" selection-end-column="50" />
-              <folding>
-                <element signature="e#3530#3574#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-2592" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/routes/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="507">
+              <caret line="309" column="23" lean-forward="true" selection-start-line="309" selection-start-column="23" selection-end-line="309" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/util/axios-auth.js">
+        <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/showcourse/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="621">
+              <caret line="128" column="5" lean-forward="true" selection-start-line="115" selection-start-column="3" selection-end-line="128" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/newsmanage/index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/routes/course.js">
+        <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/newsmanage/shownews/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="94" column="18" lean-forward="true" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
+            <state relative-caret-position="258">
+              <caret line="106" column="16" lean-forward="true" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/util/dbmodel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="41" column="20" lean-forward="true" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/util/util.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="126" column="32" lean-forward="true" selection-start-line="126" selection-start-column="32" selection-end-line="126" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/routes/news.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="48" column="37" lean-forward="true" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/newsmanage/changenews/index.vue">
+        <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/index.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="10" column="74" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="74" />
+              <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/changecourse/index.vue">
+        <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/routes/course.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-648">
-              <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+            <state relative-caret-position="2808">
+              <caret line="104" column="18" lean-forward="true" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/components/Editor/index.vue">
+        <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/routes/connect.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#1458#3721#0" />
-              </folding>
+            <state relative-caret-position="405">
+              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/usercenter/index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -210,7 +182,6 @@
       <find>request</find>
       <find>function request</find>
       <find>handlers</find>
-      <find>this.chapterData</find>
       <find>modal-lg</find>
       <find>.modal-dialog</find>
       <find>oedit</find>
@@ -218,6 +189,8 @@
       <find>osubtxt</find>
       <find>odiv</find>
       <find>ocont</find>
+      <find>coursedata</find>
+      <find>this.chapterData</find>
     </findStrings>
     <replaceStrings>
       <replace>worker</replace>
@@ -233,6 +206,7 @@
       <replace>oreduce</replace>
       <replace>osubtxt</replace>
       <replace>osubarea</replace>
+      <replace>this.coursedata.ccontent</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -241,7 +215,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/前端/onlinestudy/src/route/exam/index.js" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/route/user/index.js" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/route/admin/index.js" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/route/worker/index.js" />
@@ -258,8 +231,6 @@
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/components/usersenter/newsmanage/Editor.vue" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/view/course/index.vue" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/view/exam/index.vue" />
-        <option value="$PROJECT_DIR$/前端/onlinestudy/src/App.vue" />
-        <option value="$PROJECT_DIR$/前端/onlinestudy/src/view/usercenter/index.vue" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/view/index/indexnews.vue" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/route/news/index.js" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/view/register/index.vue" />
@@ -271,35 +242,38 @@
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/route/expire/index.js" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/route/router.js" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/components/expire/index.vue" />
-        <option value="$PROJECT_DIR$/前端/onlinestudy/src/store/index.js" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/main.js" />
         <option value="$PROJECT_DIR$/服务器/node.js/express/appServer/routes/infogetter.js" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/view/newsmanage/addnews/index.vue" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/view/newsmanage/changenews/index.vue" />
-        <option value="$PROJECT_DIR$/前端/onlinestudy/src/view/newsmanage/shownews/index.vue" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/components/usercenterNav/index.vue" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/index.vue" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/route/usercenter/index.js" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/components/userInfo/index.vue" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/node_modules/bootstrap/dist/css/bootstrap.css" />
-        <option value="$PROJECT_DIR$/服务器/node.js/express/appServer/routes/index.js" />
         <option value="$PROJECT_DIR$/服务器/node.js/express/appServer/routes/news.js" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/util/fnc.js" />
-        <option value="$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/changecourse/index.vue" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/components/Editor/index.vue" />
-        <option value="$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/addcourse/index.vue" />
         <option value="$PROJECT_DIR$/前端/onlinestudy/src/util/axios-auth.js" />
         <option value="$PROJECT_DIR$/服务器/node.js/express/appServer/app.js" />
         <option value="$PROJECT_DIR$/服务器/node.js/express/appServer/util/dbmodel.js" />
+        <option value="$PROJECT_DIR$/前端/onlinestudy/src/store/index.js" />
+        <option value="$PROJECT_DIR$/服务器/node.js/express/appServer/routes/index.js" />
         <option value="$PROJECT_DIR$/服务器/node.js/express/appServer/routes/course.js" />
+        <option value="$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/changecourse/index.vue" />
+        <option value="$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/addcourse/index.vue" />
+        <option value="$PROJECT_DIR$/前端/onlinestudy/src/App.vue" />
+        <option value="$PROJECT_DIR$/前端/onlinestudy/src/view/usercenter/index.vue" />
+        <option value="$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/showcourse/index.vue" />
+        <option value="$PROJECT_DIR$/前端/onlinestudy/src/view/newsmanage/shownews/index.vue" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="173" />
-    <option name="y" value="79" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="116" />
+    <option name="y" value="46" />
     <option name="width" value="1580" />
-    <option name="height" value="968" />
+    <option name="height" value="995" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -331,270 +305,6 @@
               <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
               <item name="前端" type="462c0819:PsiDirectoryNode" />
               <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-              <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
-              <item name=".vs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-              <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-              <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-              <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-              <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Editor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-              <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="usercenterNav" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-              <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="userInfo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-              <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="usersenter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-              <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="route" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-              <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="route" type="462c0819:PsiDirectoryNode" />
-              <item name="usercenter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-              <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-              <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-              <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-              <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="coursemanage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-              <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="coursemanage" type="462c0819:PsiDirectoryNode" />
-              <item name="addcourse" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-              <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="coursemanage" type="462c0819:PsiDirectoryNode" />
-              <item name="changecourse" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-              <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-              <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-              <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="newsmanage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-              <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="newsmanage" type="462c0819:PsiDirectoryNode" />
-              <item name="addnews" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-              <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="newsmanage" type="462c0819:PsiDirectoryNode" />
-              <item name="changenews" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-              <item name="onlinestudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="newsmanage" type="462c0819:PsiDirectoryNode" />
-              <item name="shownews" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="服务器" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="服务器" type="462c0819:PsiDirectoryNode" />
-              <item name="node.js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="服务器" type="462c0819:PsiDirectoryNode" />
-              <item name="node.js" type="462c0819:PsiDirectoryNode" />
-              <item name="express" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="服务器" type="462c0819:PsiDirectoryNode" />
-              <item name="node.js" type="462c0819:PsiDirectoryNode" />
-              <item name="express" type="462c0819:PsiDirectoryNode" />
-              <item name="appServer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="服务器" type="462c0819:PsiDirectoryNode" />
-              <item name="node.js" type="462c0819:PsiDirectoryNode" />
-              <item name="express" type="462c0819:PsiDirectoryNode" />
-              <item name="appServer" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="服务器" type="462c0819:PsiDirectoryNode" />
-              <item name="node.js" type="462c0819:PsiDirectoryNode" />
-              <item name="express" type="462c0819:PsiDirectoryNode" />
-              <item name="appServer" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="服务器" type="462c0819:PsiDirectoryNode" />
-              <item name="node.js" type="462c0819:PsiDirectoryNode" />
-              <item name="express" type="462c0819:PsiDirectoryNode" />
-              <item name="appServer" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="服务器" type="462c0819:PsiDirectoryNode" />
-              <item name="node.js" type="462c0819:PsiDirectoryNode" />
-              <item name="express" type="462c0819:PsiDirectoryNode" />
-              <item name="appServer" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="在线学习系统" type="462c0819:PsiDirectoryNode" />
-              <item name="服务器" type="462c0819:PsiDirectoryNode" />
-              <item name="node.js" type="462c0819:PsiDirectoryNode" />
-              <item name="express" type="462c0819:PsiDirectoryNode" />
-              <item name="appServer" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="在线学习系统" type="b2602c69:ProjectViewProjectNode" />
@@ -698,17 +408,18 @@
       <workItem from="1571457945779" duration="11046000" />
       <workItem from="1571565866839" duration="18115000" />
       <workItem from="1571624847271" duration="10674000" />
+      <workItem from="1571717179194" duration="11484000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="388281000" />
+    <option name="totallyTimeSpent" value="399765000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="173" y="79" width="1580" height="968" extended-state="0" />
+    <frame x="-8" y="-8" width="1873" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2464146" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20689656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -809,43 +520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/routes/message.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/usercenter/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="30" column="32" lean-forward="true" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/index/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="39" column="17" lean-forward="true" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="77" column="13" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/components/usersenter/newsmanage/news.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -875,34 +549,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/addnews/index.vue" />
-    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/newsmanage/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/newsmanage/shownews/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/showcourse/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/route/course/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
@@ -920,13 +566,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/route/usercenter/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1539">
-          <caret line="57" column="17" lean-forward="true" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/util/jwt.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -934,13 +573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2673">
           <caret line="99" column="19" selection-start-line="99" selection-start-column="12" selection-end-line="99" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/routes/connect.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -974,13 +606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10152">
-          <caret line="376" column="19" selection-start-line="376" selection-start-column="19" selection-end-line="376" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/login/index.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1134">
@@ -1004,90 +629,181 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/util/fnc.js">
+    <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/util/util.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1400">
-          <caret line="173" lean-forward="true" selection-start-line="173" selection-end-line="173" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/changecourse/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-648">
-          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/newsmanage/changenews/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="74" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="74" />
+        <state relative-caret-position="297">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/components/Editor/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
+        <state relative-caret-position="1053">
           <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#1458#3721#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/util/axios-auth.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        <state relative-caret-position="696">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/addcourse/index.vue">
+    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/newsmanage/changenews/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1399">
-          <caret line="146" column="50" lean-forward="true" selection-start-line="146" selection-start-column="50" selection-end-line="146" selection-end-column="50" />
-          <folding>
-            <element signature="e#3530#3574#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="126" column="32" lean-forward="true" selection-start-line="126" selection-start-column="32" selection-end-line="126" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/util/util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/routes/news.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="48" column="37" lean-forward="true" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
+        <state relative-caret-position="378">
+          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/util/dbmodel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
-          <caret line="41" column="20" lean-forward="true" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+          <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/routes/news.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="182" column="24" lean-forward="true" selection-start-line="182" selection-start-column="24" selection-end-line="182" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/route/usercenter/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="40" column="32" lean-forward="true" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/util/fnc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1593">
+          <caret line="173" lean-forward="true" selection-start-line="173" selection-end-line="173" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/changecourse/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="159" column="65" lean-forward="true" selection-start-line="159" selection-start-column="65" selection-end-line="159" selection-end-column="65" />
+          <folding>
+            <element signature="e#2746#2791#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/index/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/addcourse/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+          <folding>
+            <element signature="n#form#0;n#div#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/routes/connect.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/routes/course.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="94" column="18" lean-forward="true" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
+        <state relative-caret-position="2808">
+          <caret line="104" column="18" lean-forward="true" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/routes/message.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2592" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/服务器/node.js/express/appServer/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="309" column="23" lean-forward="true" selection-start-line="309" selection-start-column="23" selection-end-line="309" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/usercenter/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/newsmanage/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/coursemanage/showcourse/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="128" column="5" lean-forward="true" selection-start-line="115" selection-start-column="3" selection-end-line="128" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/onlinestudy/src/view/newsmanage/shownews/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="106" column="16" lean-forward="true" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
         </state>
       </provider>
     </entry>

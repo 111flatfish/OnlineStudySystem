@@ -179,7 +179,7 @@ router.post("/userregister.html",upload.single("uheadimage"),function (req,res) 
               }else {
                   console.log(`用户增加一名:${temp}`);
               }
-          })
+          });
           model.uid = temp + hour + minute;
           model.uname = uname;
           model.upassword = upassword;
@@ -249,7 +249,7 @@ router.post("/workerregister.html",upload.single("wheadimage"),function (req,res
             model.wbirthday = wbirthday;
             model.wemail = wemail;
             model.wheadimage = wheadimage;
-            
+
             model.save(function (err) {
                 if(err){
                     console.log(err);
@@ -302,7 +302,7 @@ router.post("/adminregister.html",upload.single("aheadimage"),function (req,res)
             model.abirthday = abirthday;
             model.aemail = aemail;
             model.aheadimage = aheadimage;
-         
+
 
             model.save(function (err) {
                 if(err){

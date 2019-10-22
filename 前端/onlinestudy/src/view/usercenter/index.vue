@@ -3,10 +3,10 @@
       <div class="usercenter_nav">
           <usercenter-nav></usercenter-nav>
       </div>
-      <div class="usercenter_content">
+      <div class="usercenter_content container">
           <router-view></router-view>
       </div>
-     
+
   </div>
 </template>
 
@@ -35,6 +35,6 @@ export default {
     border: 1px solid #1b1e21;
     width:100%;
     border-radius: 3px;
-}    
-    
+}
+
 </style>

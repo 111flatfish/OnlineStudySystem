@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="container">
+  <div id="app">
     <!--<Register></Register>-->
     <!--<Login></Login>-->
     <!--<Index></Index>-->
