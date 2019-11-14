@@ -1,26 +1,65 @@
 <template>
-    <div class="course">
-        <div class="addcourse">
-            <h1 class="page-head">添加课程：</h1>
-            <router-link to="/usercenter/coursemanage/addcourse/addarticle" tag="button" class="btn btn-primary">添加文章</router-link>
-            <router-link to="/usercenter/coursemanage/addcourse/addvideo" tag="button" class="btn btn-primary">添加视频</router-link>
+    <div class="video">
+        <form action="" method="post" class="form-group">
+            <label>标题：</label>
+            <input type="text" name="title" class="form-control" placeholder="标题" v-model="formdata.title">
+            <label>分类：</label>
+            <input type="text" name="type" class="form-control" placeholder="前端" v-model="formdata.type">
+            <label>价格：</label>
+            <input type="text" name="price" class="form-control" placeholder="价格" v-model="formdata.price">
+            <label>简介：</label>
+            <br>
+            <textarea name="synopsis" id="" cols="50" rows="10" placeholder="简介" v-model="formdata.synopsis"></textarea>
+            <br>
+            <label>章节：</label>
+            <input type="text" name="chapter" class="form-control" placeholder="章节" v-model="formdata.chapter">
+            <label>内容：</label>
+            <!--<input type="text" name="content" class="form-control" placeholder="键入内容" v-model="formdata.content">-->
+            <button class="btn-primary" @click="addChapter" type="button">增加章节</button>
+            <div id="course_content">
+                <!--<div id="chapter" chapterNum=1>-->
+                <!--<span style="border: 1px solid #000">章节1：</span><span @click="addSubChapter" style="border: 1px solid #000;border-radius: 50%">┿</span>-->
+                <!--</div>-->
+            </div>
 
-            <keep-alive>
-                <router-view></router-view>
-            </keep-alive>
 
 
-        </div>
+
+
+            <!--<Editor :catch-data="catchData" v-bind:content="txtcontent"></Editor>-->
+            <input type="button" value="上传" @click="upload" class="btn btn-primary">
+        </form>
+        <!-- Modal -->
+        <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" id="myModal">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="gridSystemModalLabel">Modal title</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="addcourseeditor">
+                                <Editor :catch-data="catchData" ref="edit" v-bind:course="true"></Editor>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" @click="saveText">Save changes</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
     </div>
 </template>
-
 
 <script>
     import axios from "../../../util/axios-auth"
     import editor from "../../../components/Editor"
     import fnc from "../../../util/fnc";
     export default {
-        name: 'course',
+        name: 'video',
         data(){
             return {
                 formdata:{
@@ -46,8 +85,8 @@
                                 cname:"",
                                 content:""
                             }
-                    ]
-                }
+                        ]
+                    }
                 ]
             }
         },
@@ -145,7 +184,6 @@
     }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     .addcourse{
         width: 1200px;

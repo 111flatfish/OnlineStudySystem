@@ -47,6 +47,16 @@ export default {
                     meta:{
                         requireAuth:true
                     },
+                    children:[
+                        {
+                            path:"addarticle",
+                            component:()=>import("../../view/coursemanage/addcourse/article")
+                        },
+                        {
+                            path:"addvideo",
+                            component:()=>import("../../view/coursemanage/addcourse/video")
+                        }
+                    ]
                 },
                 {
                     path:"changecourse",
