@@ -1,6 +1,6 @@
 <template>
     <div class="video">
-        <form action="" method="post" class="form-group">
+        <form action="" method="post" class="form-group" id="course_form" enctype="multipart/form-data">
             <label>标题：</label>
             <input type="text" name="title" class="form-control" placeholder="标题" v-model="formdata.title">
             <label>分类：</label>
@@ -29,34 +29,11 @@
             <!--<Editor :catch-data="catchData" v-bind:content="txtcontent"></Editor>-->
             <input type="button" value="上传" @click="upload" class="btn btn-primary">
         </form>
-        <!-- Modal -->
-        <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" id="myModal">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title" id="gridSystemModalLabel">Modal title</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="addcourseeditor">
-                                <Editor :catch-data="catchData" ref="edit" v-bind:course="true"></Editor>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" data-dismiss="modal" @click="saveText">Save changes</button>
-                    </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
     </div>
 </template>
 
 <script>
     import axios from "../../../util/axios-auth"
-    import editor from "../../../components/Editor"
     import fnc from "../../../util/fnc";
     export default {
         name: 'video',
@@ -70,6 +47,10 @@
                     synopsis:"",
                     chapter:1
                 },
+                form:new FormData(),
+                form2:new FormData(),
+                // 课程类型
+                type:1,
                 currentEdit:{
                     currenContent:"",
                     currenChapter:0,
@@ -82,7 +63,7 @@
                         subchapter:[
                             {
                                 suborder:1,
-                                cname:"",
+                                scname:"",
                                 content:""
                             }
                         ]
@@ -93,25 +74,31 @@
         methods:{
             upload(){
                 this.formdata.content = this.chapterData;
-                axios.post("http://127.0.0.1:80/course/addcourse",this.formdata).then(data=>{
-                    window.console.log(data.data);
-                    window.alert("添加成功")
-                    this.$router.push("/usercenter/coursemanage/showcourse")
-                })
-            },
-            catchData(value){
-                this.formdata.content = value;
-                this.currentEdit.currenContent = value;
+                window.console.log(JSON.stringify(this.chapterData));
+                this.form2.append("title",this.formdata.title);
+                this.form2.append("type",this.formdata.type);
+                this.form2.append("price",this.formdata.price);
+                this.form2.append("synopsis",this.formdata.synopsis);
+                this.form2.append("chapter",this.formdata.chapter);
+                this.form2.append("content",JSON.stringify(this.formdata.content));
+                this.form2.append("coursetype",this.type);
+                const config = {
+                    headers: { "Content-Type": "multipart/form-data" }
+                };
+                axios.post("http://127.0.0.1:80/course/uploadVideoCourse",this.form2,config).then(data=>{
+                    window.alert(data.data.message);
+                    this.$router.push("/usercenter/coursemanage/showcourse");
+                });
             },
             addChapter(){
                 let chapter = this.chapterData;
                 let temp = {
                     chapter:chapter.length +1,
-                    cname:this.formdata.title,
+                    cname:"",
                     subchapter:[]
                 };
                 chapter.push(temp);
-                fnc.showAddChapter(temp,this.addSubChapter,this.reduceChapter);
+                fnc.showAddChapter(temp,this.addSubChapter,this.reduceChapter,this.modifycname);
                 window.console.log(chapter);
             },
             addSubChapter(ev){
@@ -121,65 +108,97 @@
                 let currentChapter = chapter[chapterNum-1];
                 let temp = {
                     suborder: currentChapter.subchapter.length +1,
-                    cname:this.formdata.title,
-                    content:""
+                    scname:"",
+                    content:null
                 }
                 currentChapter.subchapter.push(temp);
-                fnc.showAddSubChapter(chapterNum,temp,this.editText,this.reduceSubChapter);
+                fnc.showAddSubChapter(chapterNum,temp,this.editText,this.reduceSubChapter,this.type,this.modifyscname);
             },
             reduceChapter(ev){
                 let numTemp = ev.target.getAttribute("chapternum");
+                let filenames = [];
+                this.chapterData[numTemp-1].subchapter.forEach((value)=>{
+                    filenames.push(value.content);
+                });
                 let chapterNum = Number.parseInt(numTemp);
                 let chapter = this.chapterData;
-                chapter.splice(chapterNum-1,1);
-                for(let i = (chapterNum-1) ; i < chapter.length;i++){
-                    chapter[i].chapter --;
+                axios.post("http://127.0.0.1:80/course/deletechapter",{"filenames":filenames}).then(data=>{
+                    if(data.data.status == 200){
+                        window.alert("删除视频成功！");
+                    }
+                });
+                for(let i = (chapterNum-1) ; i < chapter.length-1;i++){
+                    chapter[i].subchapter = chapter[i+1].subchapter;
+                    chapter[i].cname = chapter[i+1].cname;
                 }
-                window.console.log(chapter);
-                fnc.showReduceChapter(chapterNum);
+                chapter.pop();
+                fnc.showReduceChapter(this.chapterData,this.addSubChapter,this.reduceChapter,this.reduceSubChapter,this.editText,this.type,this.modifycname,this.modifyscname);
             },
             reduceSubChapter(ev){
                 let chapterNum = Number.parseInt(ev.target.getAttribute("chapter"));
                 let subOrder = Number.parseInt(ev.target.getAttribute("subchapter"));
+                // 删除原有视频
+                let filename = this.chapterData[chapterNum-1].subchapter[subOrder-1].content;
+                axios.post("http://127.0.0.1:80/course/deletevideo",{"filename":filename}).then(data=>{
+                    if(data.data.status == 204){
+                        window.alert("删除视频失败！");
+                    }
+                });
+                fnc.showReduceSubChapter(this.chapterData,chapterNum,subOrder);
                 let currentChapter = this.chapterData[chapterNum -1];
                 currentChapter.subchapter.splice(subOrder-1,1);
                 for(let i = (subOrder-1); i < currentChapter.subchapter.length; i++){
                     currentChapter.subchapter[i].suborder --;
                 }
-                window.console.log(currentChapter.subchapter);
-                fnc.showReduceSubChapter(chapterNum,subOrder);
             },
             editText(ev){
                 let chapterNum = Number.parseInt(ev.target.getAttribute("chapter"));
                 let subOrder = Number.parseInt(ev.target.getAttribute("subchapter"));
-                let content = this.chapterData[chapterNum-1].subchapter[subOrder-1].content;
-                if(content){
-                    this.currentEdit.currenContent = content;
-                }else {
-                    this.currentEdit.currenContent = "";
-                }
-                this.$refs.edit.initTxt(this.currentEdit.currenContent);
                 this.currentEdit.currenChapter = chapterNum;
                 this.currentEdit.currenSubChapter = subOrder;
-
+                this.form.delete("file");
+                this.form.append(`file`,ev.target.files[0]);
+                this.form.append("chapter",chapterNum);
+                this.form.append("subchapter",subOrder);
+                this.form.append("filename",this.chapterData[chapterNum-1].subchapter[subOrder-1].content);
+                const config = {
+                    headers: { "Content-Type": "multipart/form-data" }
+                };
+                // 重新上传视频
+                axios.post("http://127.0.0.1:80/course/modifyvideo",this.form,config).then(data=>{
+                    window.alert(data.data.message);
+                    this.chapterData[chapterNum-1].subchapter[subOrder-1].content = data.data.filename;
+                    window.console.log(this.chapterData);
+                });
+            },
+            modifycname(ev){
+                let numTemp = ev.target.getAttribute("chapterNum");
+                let chapternum = Number.parseInt(numTemp);
+                let ocname = document.getElementById(`chapter${chapternum}name`);
+                this.chapterData[chapternum-1].cname = ocname.value;
+            },
+            modifyscname(ev){
+                let numTemp = ev.target.getAttribute("subchapter");
+                let num = ev.target.getAttribute("chapter");
+                let subchapternum = Number.parseInt(numTemp);
+                let chapternum = Number.parseInt(num);
+                let oscname = document.getElementById(`chapter${num}subchapter${numTemp}name`);
+                window.console.log(oscname);
+                this.chapterData[chapternum-1].subchapter[subchapternum-1].scname = oscname.value;
+                window.console.log(this.chapterData);
             },
             saveText(){
                 let chapterNum = this.currentEdit.currenChapter;
                 let subOrder = this.currentEdit.currenSubChapter;
                 let currentChapter = this.chapterData[chapterNum -1];
                 currentChapter.subchapter[subOrder-1].content = this.currentEdit.currenContent;
-                currentChapter.subchapter[subOrder-1].cname = this.formdata.title;
                 fnc.showeditText(chapterNum,subOrder,currentChapter);
                 window.console.log(currentChapter);
             }
 
         },
         mounted() {
-            let cname = this.formdata.title;
-            fnc.showChapter(cname,this.chapterData,this.addSubChapter,this.reduceChapter,this.reduceSubChapter,this.editText);
-        },
-        components:{
-            Editor:editor
+            fnc.showChapter(this.chapterData,this.addSubChapter,this.reduceChapter,this.reduceSubChapter,this.editText,this.type,this.modifycname,this.modifyscname);
         }
     }
 </script>

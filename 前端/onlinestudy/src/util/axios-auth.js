@@ -20,10 +20,9 @@ axios.interceptors.response.use(function (response) {
 
     window.console.log( typeof response);
     if(response["data"].status == "expire"){
-        router.push({
-            path:"/expire"
-        });
+        window.alert("登录信息已过期，请重新登录！");
         window.localStorage.setItem("token","");
+        window.localStorage.setItem("usertype","");
     }
     return response;
 },function (err) {

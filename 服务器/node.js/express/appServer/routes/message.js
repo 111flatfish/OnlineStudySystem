@@ -23,110 +23,100 @@ router.post('/addmessage', function(req, res) {
     // console.log(req.body.title);
     let token = req.headers.token;
     // 前端获取的数据
-    let content = req.body.content;
+    let content = req.body.msg;
+    let type = req.body.type;
+    let cid = req.body.cid;
     // 职员信息
     let jwt = new jwtutil(token);
     let result = jwt.verifyToken();
-    // console.log(result);
     let len ;
     let date = new Date();
-    let time = dateformat(date);
+    let time = dateformat.format(date);
     // 插入数据库
     dbmodel.userconfigmodel.find({}).exec(function (err,data) {
         if(err){
             console.log("数据库出错");
+            res.send({status:400,message:"留言失败！"});
         }else{
-            len = data[0].eidincrement + 1;
-            // console.log("前"+len);
-            // console.log("后"+len);
+            len = data[0].midincrement + 1;
+            console.log(len);
             data[0].midincrement = len;
             data[0].save(function (err) {
                 if(err){
                     console.log("数据增加失败");
+                    console.log(err);
+                    res.send({status:400,message:"留言失败！"});
                 }else {
-                    console.log("考试号+1");
+                    console.log("留言号+1");
                     let message = new dbmodel.messagemodel();
                     message.mid = result +"-"+ len;
-                    message.econtent = content;
-                    message.epubdate = time;
-                    message.esubject = subject;
-                    message.wid = result;
-                    message.ecertificate = ecertificate;
-                    message.erightkey = erightkey;
+                    message.mcontent = content;
+                    message.mpubdate = time;
+                    message.id = result;
+                    message.type = type;
+                    message.cid = cid;
                     message.save(function (err) {
                         if(err){
                             console.log("插入失败");
+                            res.send({status:400,message:"留言失败！"});
                         }else {
-                            console.log("职员"+result+"上传一个考试");
+                            console.log("用户"+result+"上传一个留言");
+                            res.send({status:200,message:"添加留言成功！"});
                         }
                     });
                 }
             });
-
         }
     });
-
-    res.send({status:"添加考试"});
 });
 
-//查找新闻
-router.get("/shownews",function (req,res) {
+//查找留言
+router.get("/showmessage",function (req,res) {
     let token = req.headers.token;
     let page = req.query.page;
-    console.log(page);
     let jwt = new jwtutil(token);
     let result = jwt.verifyToken();         //workerid
-    if(page == 0){
-        dbmodel.newsmodel.find({"wid":result}).exec(function (err,data) {
-            if(err){
+    let cid = req.query.cid;
+    if (page == 0) {
+        dbmodel.messagemodel.find({"cid": cid}).exec(function (err, data) {
+            if (err) {
                 console.log(err);
-            }else{
+            } else {
                 let totallen = data.length;     //总数
-                let pagenum = Math.max(totallen/10,(Math.floor(totallen/10+1)));      //页数
-                res.send({status:"查找新闻总数",num:pagenum});
+                let pagenum = Math.max(totallen / 10, (Math.floor(totallen / 10 + 1)));      //页数
+                res.send({status: "查找留言总数", num: pagenum});
             }
         });
-    }else {
-        dbmodel.newsmodel.find({"wid":result}).limit(10).skip((page-1)*10).exec(function (err,data) {
-            if(err){
+    } else {
+        dbmodel.messagemodel.find({"cid": cid}).limit(10).skip((page - 1) * 10).exec(function (err, data) {
+            if (err) {
                 console.log(err);
-            }else{
-                res.send({status:`查找第${page}页新闻成功`,news:data});
+            } else {
+                res.send({status: `查找第${page}页留言成功`, message: data});
             }
         });
     }
 });
-
-// 修改新闻
-router.post("/modify",function (req,res) {
-    let nid = req.body.nid;
-    let nname = req.body.nname;
-    let ntype = req.body.ntype;
-    let ncontent =req.body.ncontent;
-
-    dbmodel.newsmodel.find({nid:nid}).exec(function (err,data) {
+router.post("/getsomemessage",function (req,res) {
+    let cid = req.body.cid;
+    dbmodel.messagemodel.find({"cid":cid}).exec(function (err, data) {
         if(err){
-            console.log("数据库出错");
-        }else if(data.length > 0){
-            data[0].nname = nname;
-            data[0].ntype = ntype;
-            data[0].ncontent = ncontent;
-            data[0].save(function (err) {
-                if(err){
-                    console.log("修改失败");
-                }else{
-                    res.send({status:"修改成功"});
-                }
-            });
+            console.log(err);
+            res.send({status:400,message:"出错"});
+        }else {
+            if(data.length>0){
+                res.send({status:200,message:"获取课程留言成功！",messagelist:data.splice(0,6)});
+            }else{
+                res.send({status:200,message:"课程没有留言！",messagelist:data});
+            }
         }
     });
 });
 
-// 删除新闻
-router.get("/deletenews",function (req,res) {
-    let nid = req.query.nid;
-    // console.log(nid);
-    dbmodel.newsmodel.find({nid:nid}).exec(function (err,data) {
+// 删除留言
+router.get("/deletemessage",function (req,res) {
+    let mid = req.query.mid;
+    dbmodel.messagemodel.find({mid:mid}).exec(function (err,data) {
         if(err){
             console.log("数据库出差错");
         }else {
@@ -142,11 +132,11 @@ router.get("/deletenews",function (req,res) {
 });
 
 // 首页新闻+新闻页
-router.get("/getnews",function (req,res) {
+router.get("/getmessage",function (req,res) {
     let type = req.query.type;
     // console.log(type);
     switch (type) {
-        case "newslist":
+        case "messagelist":
             dbmodel.newsmodel.find({}).limit(30).exec(function (err,data) {
                 if(err){
                     throw  err
@@ -155,7 +145,7 @@ router.get("/getnews",function (req,res) {
                 }
             });
             break;
-        case "indexnews":
+        case "indexmessage":
             dbmodel.newsmodel.find({nhits:{$gte:10}}).limit(6).exec(function (err,data) {       //点击量10以上的新闻
                 if(err){
                     throw err;
@@ -168,8 +158,8 @@ router.get("/getnews",function (req,res) {
 
 });
 
-// 新闻详情
-router.get("/singlenews",function (req,res) {
+// 留言详情
+router.get("/singlemessage",function (req,res) {
     let id = req.query.id;
     let hitflag = req.query.hitflag;
     // console.log(typeof hitflag);
@@ -191,7 +181,7 @@ router.get("/singlenews",function (req,res) {
             res.send({status:"获得新闻详情",news:data});}
         }
     });
-    
+
 
 });
 

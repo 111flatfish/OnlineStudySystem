@@ -1,9 +1,9 @@
 <template>
-    <div class="coursemanage">
-        <h1>课程管理</h1>
+    <div class="coursemanage container">
+        <h1 style="text-align: center">课程管理</h1>
         <div class="coursemanage_nav">
-            <ul>
-                <router-link tag="li" to="/usercenter/coursemanage/addcourse"><button class="btn-primary btn-lg">添加课程</button></router-link>
+            <ul style="text-align: center">
+                <router-link tag="li" to="/usercenter/coursemanage/addcourse/addarticle"><button class="btn-primary btn-lg">添加课程</button></router-link>
                 <router-link tag="li" to="/usercenter/coursemanage/showcourse"><button class="btn-primary btn-lg">显示课程</button></router-link>
                 <router-link tag="li" to="/usercenter/coursemanage/showcourse"><button class="btn-primary btn-lg">刷新</button></router-link>
             </ul>
@@ -33,7 +33,7 @@
         list-style: none;
     }
     .coursemanage_nav ul li{
-        float: left;
+        display: inline-block;
         margin-left: 20px;
     }
 </style>

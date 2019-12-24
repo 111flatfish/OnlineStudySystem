@@ -1,6 +1,6 @@
 <template>
-    <div class="Editor">
-        <div ref="editor" style="text-align:left"></div>
+    <div class="Editor" style="width: 100%">
+        <div ref="editor" style="text-align:left;width: 100%"></div>
         <button v-on:click="getContent">查看内容</button>
     </div>
 </template>

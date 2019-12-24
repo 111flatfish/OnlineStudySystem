@@ -1,4 +1,5 @@
 export default {
     path:"/course",
-    component:()=>import("../../view/course")
+    component:()=>import("../../view/course"),
+    props:true
 }

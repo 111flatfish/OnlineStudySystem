@@ -14,22 +14,30 @@ export default {
 
         },
         {
+            path:"usermanage",
+            component:()=>import("../../view/usermanage"),
+            meta:{
+                requireAuth:true
+            },
+
+        },
+        {
             path:"mycourse",
-            component:()=>import("../../components/mycourse"),
+            component:()=>import("../../view/mycourse"),
             meta:{
                 requireAuth:true
             },
         },
         {
             path:"myexam",
-            component:()=>import("../../components/myexam"),
+            component:()=>import("../../view/myexam"),
             meta:{
                 requireAuth:true
             },
         },
         {
             path:"mynews",
-            component:()=>import("../../components/mynews"),
+            component:()=>import("../../view/mynews"),
             meta:{
                 requireAuth:true
             },
@@ -64,6 +72,16 @@ export default {
                     meta:{
                         requireAuth:true
                     },
+                    children:[
+                        {
+                            path:"article",
+                            component:()=>import("../../view/coursemanage/changecourse/article.vue")
+                        },
+                        {
+                            path:"video",
+                            component:()=>import("../../view/coursemanage/changecourse/video.vue")
+                        }
+                    ]
                 },
                 {
                     path:"showcourse",
@@ -80,6 +98,25 @@ export default {
             meta:{
                 requireAuth:true
             },
+            children:[
+                {
+                    path:"addexam",
+                    component:()=>import("../../view/exammanage/addexam")
+                },
+                {
+                    path:"showexam",
+                    component:()=>import("../../view/exammanage/showexam")
+                },
+                {
+                    path:"changeexam",
+                    component:()=>import("../../view/exammanage/changeexam")
+                },
+                {
+                    path:"showgrade/:eid",
+                    component:()=>import("../../view/exammanage/showexam/showgrade"),
+                    props:true
+                }
+            ]
         },
         {
             path:"newsmanage",
@@ -111,5 +148,21 @@ export default {
                 },
             ]
         },
+        {
+            path:"message/:cid",
+            component:()=>import("../../view/message"),
+            props:true,
+            meta:{
+                requireAuth:true
+            },
+        },
+        {
+            path:"reply/:mid",
+            component:()=>import("../../view/reply"),
+            props:true,
+            meta:{
+                requireAuth:true
+            },
+        }
     ]
 }

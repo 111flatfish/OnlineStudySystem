@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <!--<Register></Register>-->
-    <!--<Login></Login>-->
-    <!--<Index></Index>-->
-    <!--<a href="http://127.0.0.1:80/check.html">点击</a>-->
-    <router-view></router-view>
+    <Header></Header>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -12,14 +12,15 @@
 
 
 import axios from "axios"
-
+import Header from "./components/header"
+import Footer from "./components/footer"
+import Side from "./components/side"
 export default {
   name: 'app',
   components: {
-    // HelloWorld
-    // Register,
-    // Index
-    // Login
+    Header,
+    Footer,
+    Side
   },
 
   // axios.get('/user?ID=12345')

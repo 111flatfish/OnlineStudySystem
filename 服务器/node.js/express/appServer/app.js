@@ -8,6 +8,9 @@ var usersRouter = require('./routes/users');
 let infoRouter = require("./routes/infogetter");
 let newsRouter = require("./routes/news");
 let courseRouter = require("./routes/course");
+let messageRouter = require("./routes/message");
+let replyRouter = require("./routes/reply");
+let examRouter = require("./routes/exam");
 const JwtUtil = require("./util/jwt");
 // let headimageRouter = require("./headimage");
 var app = express();
@@ -19,7 +22,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
-app.use(express.json());
+app.use(express.json({limit:"50mb"}));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
@@ -104,7 +107,10 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/infogetter',infoRouter);
 app.use('/news',newsRouter);
-app.use("/course",courseRouter)
+app.use("/course",courseRouter);
+app.use("/exam",examRouter);
+app.use("/message",messageRouter);
+app.use("/reply",replyRouter);
 // app.use("/headimage",headimageRouter);
 
 

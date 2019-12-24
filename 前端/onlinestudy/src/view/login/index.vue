@@ -32,19 +32,12 @@ export default {
     loginsubmit(){
        let that = this;
         let data = Qs.stringify(this.formdata);
-        window.console.log(data);
         axios.post("http://127.0.0.1/login.html",data
         ).then(function (data) {
-            // window.console.log(data.data.token);
-            // this.token = window.localStorage.getItem("token") || "";
-            // if(this.token != data.data.token){
-            //     window.localStorage.setItem("token",data.data.token);
-            // }
             window.console.log("logintype"+data.data.status);
-            window.console.log("logintoken"+data.data.token);
+            // 登录员类型
+            that.$store.commit("setlogintype",{type:data.data.status});
             window.localStorage.setItem("token",data.data.token);
-            window.console.log("aa");
-
             // 登录状态
           switch (data.data.meg) {
             case "查找数据出错":
@@ -63,11 +56,6 @@ export default {
               that.$router.push({path:'/index'});
               break;
           }
-
-          // 跳转
-          // let userdata = JSON.stringify(data.data)
-
-
         });
     }
   }

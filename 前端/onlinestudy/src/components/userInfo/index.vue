@@ -29,96 +29,97 @@
       }
     },
     methods:{
+        userinfoinit(){
+          let that = this;
+          if(this.status == "会员"){
+            axios.get("http://127.0.0.1/user.html",{
+              // headers:{Authorization:window.localStorage.getItem("token")},
+              params:{type:1}}
+            ).then(function (data) {
+              if(data.data){
+                if(data.data.status == "unsign"){
+                  window.alert("你未登录，请登录！")
+                  that.$router.push({path:'/login'});
+                }else if(data.data.status == "success"){
+                  window.console.log("获取数据成功");
+                  that.user = data.data.info;
+                  window.console.log("aa");
+                  if(data.data.info.uheadimage != ""){
+                    that.user.showheadimage = true;
+                  }
+                }else if(data.data.status == "expire"){
+                  window.alert("用户登录已过期，请重新登录！");
+                  that.$router.push({path:'/login'});
+                }else {
+                  window.alert("用户登录信息出错，请重新登录！");
+                  that.$router.push({path:'/login'});
+                }
+              }
 
+            })
+          }else if(this.status == "职员"){
+            axios.get("http://127.0.0.1/user.html",{
+              // headers:{Authorization:window.localStorage.getItem("token")},
+              params:{type:2}}
+            ).then(function (data) {
+              if(data.data){
+                if(data.data.status == "unsign"){
+                  window.alert("你未登录，请登录！")
+                  that.$router.push({path:'/login'});
+                }else if(data.data.status == "success"){
+                  window.console.log("获取数据成功");
+                  that.user.uid = data.data.info.wid;
+                  that.user.uname = data.data.info.wname;
+                  that.user.upassword = data.data.info.wpassword;
+                  that.user.uheadimage = data.data.info.wheadimage;
+                  if(data.data.info.wheadimage != ""){
+                    that.user.showheadimage = true;
+                  }
+                }else if(data.data.status == "expire"){
+                  window.alert("用户登录已过期，请重新登录！");
+                  that.$router.push({path:'/login'});
+                }else {
+                  window.alert("用户登录信息出错，请重新登录！");
+                  that.$router.push({path:'/login'});
+                }
+              }
+            })
+          }else {
+            axios.get("http://127.0.0.1/user.html",{
+              // headers:{Authorization:window.localStorage.getItem("token")},
+              params:{type:3}}
+            ).then(function (data) {
+              if(data.data){
+                if(data.data.status == "unsign"){
+                  window.alert("你未登录，请登录！")
+                  that.$router.push({path:'/login'});
+                }else if(data.data.status == "success"){
+                  window.console.log("获取数据成功");
+                  that.user.uid = data.data.info.aid;
+                  that.user.uname = data.data.info.aname;
+                  that.user.upassword = data.data.info.apassword;
+                  that.user.uheadimage = data.data.info.aheadimage;
+                  if(data.data.info.aheadimage != ""){
+                    that.user.showheadimage = true;
+                  }
+                }else if(data.data.status == "expire"){
+                  window.alert("用户登录已过期，请重新登录！");
+                  that.$router.push({path:'/login'});
+                }else {
+                  window.alert("用户登录信息出错，请重新登录！");
+                  that.$router.push({path:'/login'});
+                }
+              }
+              // window.console.log(data.data.status);
+            })
+          }
+        }
     },
     created() {
-      // this.user.uname = window.localStorage.getItem("vname");
-      // this.user.uid = window.localStorage.getItem("vid");
-        let that = this;
-        if(this.status == "会员"){
-          axios.get("http://127.0.0.1/user.html",{
-            // headers:{Authorization:window.localStorage.getItem("token")},
-            params:{type:1}}
-          ).then(function (data) {
-            if(data.data){
-              if(data.data.status == "unsign"){
-                window.alert("你未登录，请登录！")
-                that.$router.push({path:'/login'});
-              }else if(data.data.status == "success"){
-                window.console.log("获取数据成功");
-                that.user = data.data.info;
-                window.console.log("aa");
-                if(data.data.info.uheadimage != ""){
-                  that.user.showheadimage = true;
-                }
-              }else if(data.data.status == "expire"){
-                window.alert("用户登录已过期，请重新登录！");
-                that.$router.push({path:'/login'});
-              }else {
-                window.alert("用户登录信息出错，请重新登录！");
-                that.$router.push({path:'/login'});
-              }
-            }
-
-          })
-        }else if(this.status == "职员"){
-          axios.get("http://127.0.0.1/user.html",{
-            // headers:{Authorization:window.localStorage.getItem("token")},
-            params:{type:2}}
-          ).then(function (data) {
-            if(data.data){
-              if(data.data.status == "unsign"){
-                window.alert("你未登录，请登录！")
-                that.$router.push({path:'/login'});
-              }else if(data.data.status == "success"){
-                window.console.log("获取数据成功");
-                that.user.uid = data.data.info.wid;
-                that.user.uname = data.data.info.wname;
-                that.user.upassword = data.data.info.wpassword;
-                that.user.uheadimage = data.data.info.wheadimage;
-                if(data.data.info.wheadimage != ""){
-                  that.user.showheadimage = true;
-                }
-              }else if(data.data.status == "expire"){
-                window.alert("用户登录已过期，请重新登录！");
-                that.$router.push({path:'/login'});
-              }else {
-                window.alert("用户登录信息出错，请重新登录！");
-                that.$router.push({path:'/login'});
-              }
-            }
-          })
-        }else {
-          axios.get("http://127.0.0.1/user.html",{
-            // headers:{Authorization:window.localStorage.getItem("token")},
-            params:{type:3}}
-          ).then(function (data) {
-            if(data.data){
-              if(data.data.status == "unsign"){
-                window.alert("你未登录，请登录！")
-                that.$router.push({path:'/login'});
-              }else if(data.data.status == "success"){
-                window.console.log("获取数据成功");
-                that.user.uid = data.data.info.aid;
-                that.user.uname = data.data.info.aname;
-                that.user.upassword = data.data.info.apassword;
-                that.user.uheadimage = data.data.info.aheadimage;
-                if(data.data.info.aheadimage != ""){
-                  that.user.showheadimage = true;
-                }
-              }else if(data.data.status == "expire"){
-                window.alert("用户登录已过期，请重新登录！");
-                that.$router.push({path:'/login'});
-              }else {
-                window.alert("用户登录信息出错，请重新登录！");
-                that.$router.push({path:'/login'});
-              }
-            }
-            // window.console.log(data.data.status);
-          })
-        }
-
-
+      this.userinfoinit()
+    },
+    watch:{
+      "$route":"userinfoinit"
     }
   }
 </script>

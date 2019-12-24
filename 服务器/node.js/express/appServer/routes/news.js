@@ -196,8 +196,16 @@ router.get("/getnews",function (req,res) {
                 }
             })
             break;
+        case "nearnews":
+            dbmodel.newsmodel.find({}).sort({npubdate:1}).limit(4).exec(function (err,data) {       //点击量10以上的新闻
+                if(err){
+                    throw err;
+                }else {
+                    res.send({status:"获得热点新闻",nearnews:data});
+                }
+            })
+            break;
     }
-
 });
 
 // 新闻详情

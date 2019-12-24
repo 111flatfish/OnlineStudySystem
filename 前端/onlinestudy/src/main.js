@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
-import "bootstrap/dist/js/bootstrap"
-import "bootstrap/dist/css/bootstrap.css"
-import "jquery/dist/jquery"
+import "../public/css/bootstrap.css"
+import "../public/js/jquery-3.4.1"
+import "../public/js/bootstrap"
 import router from "./route/router"
 import Vuex from "vuex"
 import store from "./store/index"

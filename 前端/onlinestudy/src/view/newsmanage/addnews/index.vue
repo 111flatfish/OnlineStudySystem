@@ -13,22 +13,6 @@
         <input type="button" value="上传" @click="upload" class="btn btn-primary">
       </form>
       <div>{{formdata.content}}</div>
-      <!--<div id="contentedit">-->
-        <!--<div id="control">-->
-          <!--<ul>-->
-            <!--<li>H</li>-->
-            <!--<li>I</li>-->
-            <!--<li>E</li>-->
-            <!--<li>M</li>-->
-            <!--<li>=</li>-->
-            <!--<li>=</li>-->
-            <!--<li>=</li>-->
-            <!--<li>img</li>-->
-          <!--</ul>-->
-        <!--</div>-->
-        <!--<div id="edit" contenteditable="true">-->
-        <!--</div>-->
-      <!--</div>-->
     </div>
   </div>
 </template>

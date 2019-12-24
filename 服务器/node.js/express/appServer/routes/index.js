@@ -20,66 +20,6 @@ let storage = multer.diskStorage({
 });
 let upload = multer({storage:storage});
 
-// 用户骨架
-let userschema = mongoose.Schema({
-    uid:String,         //系统生成
-    uname:String,       //昵称
-    usex:String,        //性别
-    utelephone:String,    //电话
-    ucoin : Number,       //金币
-    ubirthday : String,    //生日
-    uemail : String,        //邮件
-    uheadimage : String,    //头像
-    uscore : Number,        //积分
-    umonetary : Number,     //消费金额
-    upassword : String,     //密码
-    urank : Number,         //会员等级
-    udiscount : Number,     //会员折扣
-    uacitve : Number,       //激活状态
-});
-
-
-
-// 职员骨架
-let workerschema = mongoose.Schema({
-    wid:String,         //系统生成-->
-    wname:String,       //昵称-->
-    wsex:String,        //性别-->
-    wtelephone:String,    //电话-->
-    wbirthday : String,    //生日-->
-    wemail : String,        //邮件-->
-    wheadimage : String,    //头像-->
-    wpassword : String,     //密码-->
-});
-
-
-// 系统管理员骨架
-let adminschema = mongoose.Schema({
-    aid:String,         //系统生成-->
-    aname:String,       //昵称-->
-    asex:String,        //性别-->
-    atelephone:String,    //电话-->
-    abirthday : String,    //生日-->
-    aemail : String,        //邮件-->
-    aheadimage : String,    //头像-->
-    apassword : String,     //密码-->
-    aidcardnum:String       //身份证号
-});
-
-
-
-// 用户模型
-let usermodel = new mongoose.model("user",userschema,"user");
-
-
-
-// 职员模型
-let workermodel = new mongoose.model("worker",workerschema,"worker");
-
-
-// 系统管理员模型
-let adminmodel = new mongoose.model("admin",adminschema,"admin");
-
 router.all('*', function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "x-requested-with,content-type,token,Authorization");
@@ -101,12 +41,12 @@ router.get('/user.html', function(req, res) {
         let result = jwt.verifyToken();
         if(result == "err"){
             // console.log("出错");
-            res.send({status:"expire"});
+            res.send({status:"expire",info:null});
         }else {
             switch (type) {
                 case "1":
                     console.log("用户");
-                    usermodel.findOne({"uid":result}).exec(function (err,data) {
+                    dbmodel.usermodel.findOne({"uid":result}).exec(function (err,data) {
                         if(err){
                             throw err;
                         }else {
@@ -117,7 +57,7 @@ router.get('/user.html', function(req, res) {
                     })
                     break;
                 case "2":
-                    workermodel.findOne({"wid":result}).exec(function (err,data) {
+                    dbmodel.workermodel.findOne({"wid":result}).exec(function (err,data) {
                         if(err){
                             throw err;
                         }else {
@@ -128,7 +68,7 @@ router.get('/user.html', function(req, res) {
                     })
                     break;
                 case "3":
-                    adminmodel.findOne({"aid":result}).exec(function (err,data) {
+                    dbmodel.adminmodel.findOne({"aid":result}).exec(function (err,data) {
                         if(err){
                             throw err;
                         }else {
@@ -150,6 +90,8 @@ router.get("/favicon.ico",function (req,res) {
     res.send("favicon success");
 });
 
+
+
 //用户注册
 router.post("/userregister.html",upload.single("uheadimage"),function (req,res) {
     // res.send("bb");
@@ -162,7 +104,7 @@ router.post("/userregister.html",upload.single("uheadimage"),function (req,res) 
     let file = req.file || {};
     let uheadimage = file.filename || "";
 
-  let model = new usermodel();
+  let model = new dbmodel.usermodel();
   dbmodel.userconfigmodel.find({}).exec(function (err,data) {
       if(err){
           console.log(err);
@@ -188,12 +130,12 @@ router.post("/userregister.html",upload.single("uheadimage"),function (req,res) 
           model.ubirthday = ubirthday;
           model.uemail = uemail;
           model.uheadimage = uheadimage;
-          model.uscore = 0;
-          model.umonetary = 0;
-          model.ucoin = 0;
-          model.urank = 1;
-          model.udiscount = 0;
-          model.uacitve = 1;
+          model.uscore = 0;     //积分
+          model.umonetary = 0;  //消费金额
+          model.ucoin = 0;      //金币
+          model.urank = 1;       //等级
+          model.udiscount = 0;  //折扣
+          model.uacitve = 1;      //状态
 
           model.save(function (err) {
             if(err){
@@ -204,9 +146,6 @@ router.post("/userregister.html",upload.single("uheadimage"),function (req,res) 
           });
       }
 });
-
-
-
 });
 
 //职员注册
@@ -221,9 +160,9 @@ router.post("/workerregister.html",upload.single("wheadimage"),function (req,res
     let file = req.file || {};
     let wheadimage = file.filename || "";
 
-    let model = new workermodel();
+    let model = new dbmodel.workermodel();
 
-    userconfigmodel.find({}).exec(function (err,data) {
+    dbmodel.userconfigmodel.find({}).exec(function (err,data) {
         if(err){
             console.log(err);
         }else {
@@ -276,8 +215,8 @@ router.post("/adminregister.html",upload.single("aheadimage"),function (req,res)
     let file = req.file || {};
     let aheadimage = file.filename || "";
 
-    let model = new adminmodel();
-    userconfigmodel.find({}).exec(function (err,data) {
+    let model = new dbmodel.adminmodel();
+    dbmodel.userconfigmodel.find({}).exec(function (err,data) {
         if(err){
             console.log(err);
         }else {
@@ -325,7 +264,7 @@ router.post("/login.html",function (req,res) {
   let logintype = req.body.logintype;
   switch (logintype) {
       case "会员":
-          usermodel.find({"uname":username}).exec(function (err,data) {
+          dbmodel.usermodel.find({"uname":username}).exec(function (err,data) {
             if(err){
               res.send({meg:"查找数据出错"});
             }else if(data.length > 0){
@@ -344,7 +283,7 @@ router.post("/login.html",function (req,res) {
           });
           break;
       case "职员":
-          workermodel.find({"wname":username}).exec(function (err,data) {
+          dbmodel.workermodel.find({"wname":username}).exec(function (err,data) {
               if(err){
                   res.send({meg:"查找数据出错"});
               }else if(data.length > 0){
@@ -363,7 +302,7 @@ router.post("/login.html",function (req,res) {
           });
           break;
       case "系统管理员":
-          adminmodel.find({"aname":username}).exec(function (err,data) {
+          dbmodel.adminmodel.find({"aname":username}).exec(function (err,data) {
               if(err){
                   res.send({meg:"查找数据出错"});
               }else if(data.length > 0){
@@ -382,7 +321,6 @@ router.post("/login.html",function (req,res) {
           });
           break;
   }
-
 });
 
 

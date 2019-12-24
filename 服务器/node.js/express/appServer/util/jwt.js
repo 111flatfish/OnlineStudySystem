@@ -17,7 +17,7 @@ class Jwt {
         let cert = fs.readFileSync(path.join(__dirname, '../pem/rsa_private_key.pem'));//私钥 可以自己生成
         let token = jwt.sign({
             data,
-            exp: created + 60 * 60,
+            exp: created + 240 * 60,
         }, cert, {algorithm: 'RS256'});
         return token;
     }

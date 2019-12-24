@@ -1,5 +1,5 @@
 <template>
-    <div class="showcourse">
+    <div class="showcourse container">
         <h1 class="page-header">课程:</h1>
         <div class="showcourse_content">
             <table class="table table-bordered">
@@ -10,6 +10,7 @@
                     <th>价格</th>
                     <th colspan="2">内容</th>
                     <th>上传时间</th>
+                    <th>管理留言</th>
                     <th>更新</th>
                     <th>删除</th>
 
@@ -22,7 +23,8 @@
                     <td>{{item.cprice}}</td>
                     <td colspan="2">{{item.ccontent}}</td>
                     <td>{{item.cpubdate}}</td>
-                    <td><button @click="changebtn({cid:item.cid,cname:item.cname,ctype:item.ctype,csynopsis:item.csynopsis,cprice:item.cprice,ccontent:item.ccontent})">更新</button></td>
+                    <td><button @click="messagebtn({cid:item.cid})">查看留言</button></td>
+                    <td><button @click="changebtn({cid:item.cid,cname:item.cname,ctype:item.ctype,csynopsis:item.csynopsis,cprice:item.cprice,ccontent:item.ccontent,coursetype:item.coursetype})">更新</button></td>
                     <td><button @click="deletebtn({cid:item.cid})">删除</button></td>
                 </tr>
             </table>
@@ -52,16 +54,24 @@
         },
         methods:{
             changebtn(data){
-                window.console.log(data.cname);
                 this.$store.commit("setcoursedata",data);
-                this.$router.push("/usercenter/coursemanage/changecourse");
+                if(data.coursetype == 0){
+                    this.$router.push("/usercenter/coursemanage/changecourse/article");
+                }else {
+                    this.$router.push("/usercenter/coursemanage/changecourse/video");
+                }
+            },
+            messagebtn(data){
+                  this.$router.push({
+                      path:`/usercenter/message/${data.cid}`
+                  })
             },
             deletebtn(data){
                 // window.console.log(data.nid);
                 axios.get("http://127.0.0.1:80/course/deletecourse?cid="+data.cid).then(data=>{
                     window.console.log(data);
                     window.alert("删除成功");
-                    this.$router.push("/usercenter/coursemanage/showcourse");
+                    this.$router.go(0);
                 });
             },
             page(ev){
@@ -125,6 +135,5 @@
         overflow: hidden;
         white-space: nowrap;
         text-align: left
-
     }
 </style>

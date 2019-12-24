@@ -17,10 +17,7 @@
     height: 300px;
     padding-top: 100px;
     background-color: #00B7FF;
-    position: absolute;
-    left:50%;
-    top: 50%;
-    margin: -200px 0 0 -150px;
+    margin: 100px auto;
     text-align: center;
     border: 1px solid #1b1e21;
     border-radius: 4px;

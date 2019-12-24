@@ -32,14 +32,14 @@
         <!-- Modal -->
         <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" id="myModal">
             <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
+                <div class="modal-content" style="width: 112%">
                     <div class="modal-header">
                         <h4 class="modal-title" id="gridSystemModalLabel">Modal title</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
-                        <div class="row">
-                            <div class="addcourseeditor">
+                        <div class="row clearfix">
+                            <div class="addcourseeditor" style="width: 100%">
                                 <Editor :catch-data="catchData" ref="edit" v-bind:course="true"></Editor>
                             </div>
                         </div>
@@ -68,8 +68,11 @@
                     content:null,
                     price:0,
                     synopsis:"",
-                    chapter:1
+                    chapter:1,
+                    coursetype:0
                 },
+                // 课程类型
+                type:0,
                 currentEdit:{
                     currenContent:"",
                     currenChapter:0,
@@ -82,7 +85,7 @@
                         subchapter:[
                             {
                                 suborder:1,
-                                cname:"",
+                                scname:"",
                                 content:""
                             }
                         ]
@@ -107,12 +110,11 @@
                 let chapter = this.chapterData;
                 let temp = {
                     chapter:chapter.length +1,
-                    cname:this.formdata.title,
+                    cname:"",
                     subchapter:[]
                 };
                 chapter.push(temp);
-                fnc.showAddChapter(temp,this.addSubChapter,this.reduceChapter);
-                window.console.log(chapter);
+                fnc.showAddChapter(temp,this.addSubChapter,this.reduceChapter,this.modifycname);
             },
             addSubChapter(ev){
                 let numTemp = ev.target.getAttribute("chapternum");
@@ -121,33 +123,47 @@
                 let currentChapter = chapter[chapterNum-1];
                 let temp = {
                     suborder: currentChapter.subchapter.length +1,
-                    cname:this.formdata.title,
+                    scname:"",
                     content:""
                 }
                 currentChapter.subchapter.push(temp);
-                fnc.showAddSubChapter(chapterNum,temp,this.editText,this.reduceSubChapter);
+                fnc.showAddSubChapter(chapterNum,temp,this.editText,this.reduceSubChapter,this.type,this.modifyscname);
+            },
+            modifycname(ev){
+                let numTemp = ev.target.getAttribute("chapterNum");
+                let chapternum = Number.parseInt(numTemp);
+                let ocname = document.getElementById(`chapter${chapternum}name`);
+                this.chapterData[chapternum-1].cname = ocname.value;
+            },
+            modifyscname(ev){
+                let numTemp = ev.target.getAttribute("subchapter");
+                let num = ev.target.getAttribute("chapter");
+                let subchapternum = Number.parseInt(numTemp);
+                let chapternum = Number.parseInt(num);
+                let oscname = document.getElementById(`chapter${num}subchapter${numTemp}name`);
+                this.chapterData[chapternum-1].subchapter[subchapternum-1].scname = oscname.value;
             },
             reduceChapter(ev){
                 let numTemp = ev.target.getAttribute("chapternum");
                 let chapterNum = Number.parseInt(numTemp);
                 let chapter = this.chapterData;
-                chapter.splice(chapterNum-1,1);
-                for(let i = (chapterNum-1) ; i < chapter.length;i++){
-                    chapter[i].chapter --;
+                // chapter.splice(chapterNum-1,1);
+                for(let i = (chapterNum-1) ; i < chapter.length-1;i++){
+                    chapter[i].subchapter = chapter[i+1].subchapter;
+                    chapter[i].cname = chapter[i+1].cname;
                 }
-                window.console.log(chapter);
-                fnc.showReduceChapter(chapterNum);
+                chapter.pop();
+                fnc.showReduceChapter(this.chapterData,this.addSubChapter,this.reduceChapter,this.reduceSubChapter,this.editText,this.type,this.modifycname,this.modifyscname);
             },
             reduceSubChapter(ev){
                 let chapterNum = Number.parseInt(ev.target.getAttribute("chapter"));
                 let subOrder = Number.parseInt(ev.target.getAttribute("subchapter"));
                 let currentChapter = this.chapterData[chapterNum -1];
+                fnc.showReduceSubChapter(this.chapterData,chapterNum,subOrder);
                 currentChapter.subchapter.splice(subOrder-1,1);
                 for(let i = (subOrder-1); i < currentChapter.subchapter.length; i++){
                     currentChapter.subchapter[i].suborder --;
                 }
-                window.console.log(currentChapter.subchapter);
-                fnc.showReduceSubChapter(chapterNum,subOrder);
             },
             editText(ev){
                 let chapterNum = Number.parseInt(ev.target.getAttribute("chapter"));
@@ -168,15 +184,13 @@
                 let subOrder = this.currentEdit.currenSubChapter;
                 let currentChapter = this.chapterData[chapterNum -1];
                 currentChapter.subchapter[subOrder-1].content = this.currentEdit.currenContent;
-                currentChapter.subchapter[subOrder-1].cname = this.formdata.title;
                 fnc.showeditText(chapterNum,subOrder,currentChapter);
                 window.console.log(currentChapter);
             }
 
         },
         mounted() {
-            let cname = this.formdata.title;
-            fnc.showChapter(cname,this.chapterData,this.addSubChapter,this.reduceChapter,this.reduceSubChapter,this.editText);
+            fnc.showChapter(this.chapterData,this.addSubChapter,this.reduceChapter,this.reduceSubChapter,this.editText,this.type,this.modifycname,this.modifyscname);
         },
         components:{
             Editor:editor

@@ -1,13 +1,5 @@
 <template>
   <div class="workerRegister">
-    <!--wid:String,         //系统生成-->
-    <!--wname:String,       //昵称-->
-    <!--wsex:String,        //性别-->
-    <!--wtelephone:String,    //电话-->
-    <!--wbirthday : String,    //生日-->
-    <!--wemail : String,        //邮件-->
-    <!--wheadimage : Binary,    //头像-->
-    <!--wpassword : String,     //密码-->
 
     <form action="http://127.0.0.1:80/workerregister.html" method="post" enctype="multipart/form-data">
       <input type="text" name="wname" placeholder="职员名称">
